@@ -13,6 +13,8 @@
     "babel-loader": "^8.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-intl": "^5.8.2",
+    "react-intl-translations-manager": "^5.0.3",
     "react-redux": "^7.2.1",
     "react-scripts": "3.4.3",
     "redux": "^4.0.5",
@@ -23,9 +25,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "yarn extract src/messages/*.ts* --out-file lang/en.json --format formatter.js && react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "extract": "formatjs extract"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -43,6 +46,8 @@
     ]
   },
   "devDependencies": {
+    "@formatjs/cli": "^2.11.3",
+    "@types/react-intl": "^3.0.0",
     "@types/react-redux": "^7.1.9"
   }
 }

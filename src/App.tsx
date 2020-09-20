@@ -7,10 +7,12 @@ import {
 } from './redux/count/actions';
 import { connect } from 'react-redux';
 import { ApplicationState } from './redux/types';
+import { FormattedDate, injectIntl, WrappedComponentProps } from 'react-intl';
+import messages from './messages/messages';
 
 export type GenericCallBack = (...args: any[]) => any;
 
-export interface AppProps {
+export interface AppProps extends WrappedComponentProps {
   count: any;
   increaseCounter: any;
   decreaseCounter: any;
@@ -31,7 +33,8 @@ export class App extends React.Component<AppProps, AppState> {
     const {
       count: { count },
       increaseCounter,
-      decreaseCounter
+      decreaseCounter,
+      intl: { formatMessage }
     } = this.props;
     const { increaseBy } = this.state;
     return (
@@ -44,7 +47,16 @@ export class App extends React.Component<AppProps, AppState> {
           }));
         }}></Input>
         <Button primary onClick={() => decreaseCounter(increaseBy)}>Decrease</Button>
-        <Label>{count}</Label>
+        <Label>{count}</Label><br/>
+        <FormattedDate
+          value={new Date(1459913574887)}
+          year="numeric"
+          month="long"
+          day="numeric"
+          weekday="long"
+        />
+        {formatMessage(messages.car)}
+        {formatMessage(messages.bus)}
       </div>
     );
   }
@@ -67,4 +79,4 @@ const mapActionToProps: Partial<AppProps> = {
 export default connect(
   mapStateToProps,
   mapActionToProps
- )(App);
+ )(injectIntl(App));
