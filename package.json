@@ -2,6 +2,7 @@
   "name": "delivery-app-client",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://sanjitkhan.github.io/delivery-app-client",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -11,6 +12,7 @@
     "@types/react": "^16.9.49",
     "@types/react-dom": "^16.9.8",
     "babel-loader": "^8.1.0",
+    "gh-pages": "^3.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-intl": "^5.8.2",
@@ -18,6 +20,7 @@
     "react-redux": "^7.2.1",
     "react-scripts": "3.4.3",
     "redux": "^4.0.5",
+    "redux-mock-store": "^1.5.4",
     "redux-saga": "^1.1.3",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^1.2.1",
@@ -28,7 +31,9 @@
     "build": "yarn extract src/messages/*.ts* --out-file lang/en.json --format formatter.js && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "extract": "formatjs extract"
+    "extract": "formatjs extract",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
