@@ -7,6 +7,8 @@ import { all, fork } from "redux-saga/effects";
 import App from "./App";
 import { rootReducer } from "./redux";
 import { watchApplicationFunctions } from "./redux/count";
+import { ThemeProvider } from "styled-components";
+import { lightTheme } from "./themes";
 
 // init store
 export const initStore = () => {
@@ -41,9 +43,11 @@ export const init = async (locale: string, store) => {
   return (
     <IntlProvider {...intl}>
       <Provider store={store}>
-        <React.StrictMode>
-          <App />
-        </React.StrictMode>
+        <ThemeProvider theme={lightTheme}>
+          <React.StrictMode>
+            <App />
+          </React.StrictMode>
+        </ThemeProvider>
       </Provider>
     </IntlProvider>
   );
