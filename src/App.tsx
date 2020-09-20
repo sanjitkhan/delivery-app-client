@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button, Label, Input } from 'semantic-ui-react';
-import './App.css';
 import { 
   increaseCounter as increaseCounterAction,
   decreaseCounter as decreaseCounterAction
@@ -9,6 +8,7 @@ import { connect } from 'react-redux';
 import { ApplicationState } from './redux/types';
 import { FormattedDate, injectIntl, WrappedComponentProps } from 'react-intl';
 import messages from './messages/messages';
+import styled from 'styled-components';
 
 export type GenericCallBack = (...args: any[]) => any;
 
@@ -21,6 +21,11 @@ export interface AppProps extends WrappedComponentProps {
 interface AppState {
   increaseBy: number;
 }
+
+const StyledDiv = styled.div`
+  text-align: center;
+  background-color: ${props => props.theme.background.pageBackground}
+`;
 
 export class App extends React.Component<AppProps, AppState> {
   constructor(props: AppProps) {
@@ -38,7 +43,7 @@ export class App extends React.Component<AppProps, AppState> {
     } = this.props;
     const { increaseBy } = this.state;
     return (
-      <div className="App">
+      <StyledDiv>
         <div>abc</div>
         <Button primary onClick={() => increaseCounter(increaseBy)}>Increase</Button>
         <Input type="number" value={increaseBy} onChange={(e, { value }) => {
@@ -57,7 +62,7 @@ export class App extends React.Component<AppProps, AppState> {
         />
         {formatMessage(messages.car)}
         {formatMessage(messages.bus)}
-      </div>
+      </StyledDiv>
     );
   }
 }
