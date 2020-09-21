@@ -1,30 +1,30 @@
 {
   "files": {
     "main.css": "/delivery-app-client/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/delivery-app-client/static/js/main.c226ee67.chunk.js",
-    "main.js.map": "/delivery-app-client/static/js/main.c226ee67.chunk.js.map",
-    "runtime-main.js": "/delivery-app-client/static/js/runtime-main.71ce133f.js",
-    "runtime-main.js.map": "/delivery-app-client/static/js/runtime-main.71ce133f.js.map",
+    "main.js": "/delivery-app-client/static/js/main.62e39572.chunk.js",
+    "main.js.map": "/delivery-app-client/static/js/main.62e39572.chunk.js.map",
+    "runtime-main.js": "/delivery-app-client/static/js/runtime-main.98dbc052.js",
+    "runtime-main.js.map": "/delivery-app-client/static/js/runtime-main.98dbc052.js.map",
     "static/css/2.d4178bee.chunk.css": "/delivery-app-client/static/css/2.d4178bee.chunk.css",
-    "static/js/2.d72096f6.chunk.js": "/delivery-app-client/static/js/2.d72096f6.chunk.js",
-    "static/js/2.d72096f6.chunk.js.map": "/delivery-app-client/static/js/2.d72096f6.chunk.js.map",
-    "static/js/3.6ea39038.chunk.js": "/delivery-app-client/static/js/3.6ea39038.chunk.js",
-    "static/js/3.6ea39038.chunk.js.map": "/delivery-app-client/static/js/3.6ea39038.chunk.js.map",
-    "static/js/4.eab68020.chunk.js": "/delivery-app-client/static/js/4.eab68020.chunk.js",
-    "static/js/4.eab68020.chunk.js.map": "/delivery-app-client/static/js/4.eab68020.chunk.js.map",
+    "static/js/2.0a1e4d37.chunk.js": "/delivery-app-client/static/js/2.0a1e4d37.chunk.js",
+    "static/js/2.0a1e4d37.chunk.js.map": "/delivery-app-client/static/js/2.0a1e4d37.chunk.js.map",
+    "static/js/3.0cd7be1b.chunk.js": "/delivery-app-client/static/js/3.0cd7be1b.chunk.js",
+    "static/js/3.0cd7be1b.chunk.js.map": "/delivery-app-client/static/js/3.0cd7be1b.chunk.js.map",
+    "static/js/4.9186d58d.chunk.js": "/delivery-app-client/static/js/4.9186d58d.chunk.js",
+    "static/js/4.9186d58d.chunk.js.map": "/delivery-app-client/static/js/4.9186d58d.chunk.js.map",
     "index.html": "/delivery-app-client/index.html",
-    "precache-manifest.580d98bdad073371ef3980931959705a.js": "/delivery-app-client/precache-manifest.580d98bdad073371ef3980931959705a.js",
+    "precache-manifest.2264edee40e4807b07262215c15f7116.js": "/delivery-app-client/precache-manifest.2264edee40e4807b07262215c15f7116.js",
     "service-worker.js": "/delivery-app-client/service-worker.js",
     "static/css/2.d4178bee.chunk.css.map": "/delivery-app-client/static/css/2.d4178bee.chunk.css.map",
     "static/css/main.5ecd60fb.chunk.css.map": "/delivery-app-client/static/css/main.5ecd60fb.chunk.css.map",
-    "static/js/2.d72096f6.chunk.js.LICENSE.txt": "/delivery-app-client/static/js/2.d72096f6.chunk.js.LICENSE.txt",
+    "static/js/2.0a1e4d37.chunk.js.LICENSE.txt": "/delivery-app-client/static/js/2.0a1e4d37.chunk.js.LICENSE.txt",
     "static/media/semantic.min.css": "/delivery-app-client/static/media/outline-icons.ef60a4f6.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.71ce133f.js",
+    "static/js/runtime-main.98dbc052.js",
     "static/css/2.d4178bee.chunk.css",
-    "static/js/2.d72096f6.chunk.js",
+    "static/js/2.0a1e4d37.chunk.js",
     "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.c226ee67.chunk.js"
+    "static/js/main.62e39572.chunk.js"
   ]
 }
