@@ -8,6 +8,7 @@ import App from "./App";
 import { rootReducer } from "./redux";
 import { watchApplicationFunctions } from "./redux/count";
 import { ThemeProvider } from "styled-components";
+import { BrowserRouter } from 'react-router-dom';
 import { lightTheme } from "./themes";
 
 // init store
@@ -44,9 +45,11 @@ export const init = async (locale: string, store) => {
     <IntlProvider {...intl}>
       <Provider store={store}>
         <ThemeProvider theme={lightTheme}>
-          <React.StrictMode>
-            <App />
-          </React.StrictMode>
+          <BrowserRouter>
+            <React.StrictMode>
+              <App />
+            </React.StrictMode>
+          </BrowserRouter>
         </ThemeProvider>
       </Provider>
     </IntlProvider>

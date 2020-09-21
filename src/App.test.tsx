@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 import configureMockStore from 'redux-mock-store';
 import { lightTheme } from './themes';
 import { ThemeProvider } from 'styled-components';
+import { BrowserRouter } from 'react-router-dom';
 
 const mockStore = configureMockStore([]);
 
@@ -19,11 +20,12 @@ test('renders base app properly', () => {
     <IntlProvider locale={'en'}>
       <Provider store={store}>
         <ThemeProvider theme={lightTheme}>
-          <App />
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
         </ThemeProvider>
       </Provider>
     </IntlProvider>
   );
-  expect(getByText(/Ford/)).toBeInTheDocument();
   expect(getByText(/Increase/)).toBeInTheDocument(); //button
 });
