@@ -1,30 +1,30 @@
 {
   "files": {
     "main.css": "/delivery-app-client/static/css/main.ef7bf322.chunk.css",
-    "main.js": "/delivery-app-client/static/js/main.21df0a2b.chunk.js",
-    "main.js.map": "/delivery-app-client/static/js/main.21df0a2b.chunk.js.map",
+    "main.js": "/delivery-app-client/static/js/main.3dd7aa75.chunk.js",
+    "main.js.map": "/delivery-app-client/static/js/main.3dd7aa75.chunk.js.map",
     "runtime-main.js": "/delivery-app-client/static/js/runtime-main.e55f290e.js",
     "runtime-main.js.map": "/delivery-app-client/static/js/runtime-main.e55f290e.js.map",
     "static/css/2.d4178bee.chunk.css": "/delivery-app-client/static/css/2.d4178bee.chunk.css",
-    "static/js/2.58926b92.chunk.js": "/delivery-app-client/static/js/2.58926b92.chunk.js",
-    "static/js/2.58926b92.chunk.js.map": "/delivery-app-client/static/js/2.58926b92.chunk.js.map",
+    "static/js/2.90039b69.chunk.js": "/delivery-app-client/static/js/2.90039b69.chunk.js",
+    "static/js/2.90039b69.chunk.js.map": "/delivery-app-client/static/js/2.90039b69.chunk.js.map",
     "static/js/3.4c7d0d73.chunk.js": "/delivery-app-client/static/js/3.4c7d0d73.chunk.js",
     "static/js/3.4c7d0d73.chunk.js.map": "/delivery-app-client/static/js/3.4c7d0d73.chunk.js.map",
     "static/js/4.07beb09c.chunk.js": "/delivery-app-client/static/js/4.07beb09c.chunk.js",
     "static/js/4.07beb09c.chunk.js.map": "/delivery-app-client/static/js/4.07beb09c.chunk.js.map",
     "index.html": "/delivery-app-client/index.html",
-    "precache-manifest.ef4505365dc1fd1cc6f87a447c38cd39.js": "/delivery-app-client/precache-manifest.ef4505365dc1fd1cc6f87a447c38cd39.js",
+    "precache-manifest.a7d2b6381f68750cd92f83a1de142001.js": "/delivery-app-client/precache-manifest.a7d2b6381f68750cd92f83a1de142001.js",
     "service-worker.js": "/delivery-app-client/service-worker.js",
     "static/css/2.d4178bee.chunk.css.map": "/delivery-app-client/static/css/2.d4178bee.chunk.css.map",
     "static/css/main.ef7bf322.chunk.css.map": "/delivery-app-client/static/css/main.ef7bf322.chunk.css.map",
-    "static/js/2.58926b92.chunk.js.LICENSE.txt": "/delivery-app-client/static/js/2.58926b92.chunk.js.LICENSE.txt",
+    "static/js/2.90039b69.chunk.js.LICENSE.txt": "/delivery-app-client/static/js/2.90039b69.chunk.js.LICENSE.txt",
     "static/media/semantic.min.css": "/delivery-app-client/static/media/outline-icons.ef60a4f6.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.e55f290e.js",
     "static/css/2.d4178bee.chunk.css",
-    "static/js/2.58926b92.chunk.js",
+    "static/js/2.90039b69.chunk.js",
     "static/css/main.ef7bf322.chunk.css",
-    "static/js/main.21df0a2b.chunk.js"
+    "static/js/main.3dd7aa75.chunk.js"
   ]
 }
