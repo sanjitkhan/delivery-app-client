@@ -26,7 +26,7 @@ export const initStore = () => {
 
 // intl utils
 export async function loadLocaleData(locale: string) {
-  const message = await import(`../lang/${locale}.json`);
+  const message = await import(`../../lang/${locale}.json`);
   return message.default;
 }
 

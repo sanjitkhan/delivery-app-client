@@ -7,5 +7,5 @@ test('renders base app properly', () => {
   const { getByText } = render(
     addAllProviders(<App />)
   );
-  expect(getByText(/Order/)).toBeInTheDocument(); //button
+  expect(getByText(/Order/)).toBeInTheDocument(); // Order menu button
 });

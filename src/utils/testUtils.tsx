@@ -59,7 +59,7 @@ export const addAllProviders = (app: JSX.Element, locale?: string, store?: any, 
   );
 }
 
-export const mouseClick = (node: Node): boolean =>
+export const mouseClick = (node: HTMLElement): boolean =>
   node.dispatchEvent(new MouseEvent('click', { bubbles: true }));
 
 export const getElementBySelector = (

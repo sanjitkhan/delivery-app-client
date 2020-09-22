@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-import { Segment, Grid, Icon } from "semantic-ui-react";
+import { Icon } from "semantic-ui-react";
 import styled from "styled-components";
 
 export const StyledMenu = styled.div`
   position: fixed;
   bottom: 0;
-  height: 8%;
+  height: 10%;
   width: 100%;
   display: table;
-  padding: 5px;
+  padding: 2px;
   border: 1px solid ${props => props.theme.menu.border};
   background-color: ${props => props.theme.menu.optionBackground};
 `;
@@ -17,9 +17,9 @@ export const StyledMenu = styled.div`
 const StyledItemContainer = styled.div<{width: number, isActive: boolean}>`
   display: table-cell;
   width: ${props => props.width}%;
-  text-align: center;
+  // text-align: center;
   color: ${props => props.theme.menu.text};
-  padding: 20px;
+  padding: 2px;
   vertical-align: middle;
   ${props => props.isActive && `background-color: ${props.theme.menu.activeOptionBackground}`};
 
@@ -28,8 +28,14 @@ const StyledItemContainer = styled.div<{width: number, isActive: boolean}>`
   }
 
   label {
-    margin-top: 15px;
-    font-size: 2.5em;
+    margin-top: 6px;
+    font-size: 0.8em;
+  }
+
+  .menu-item-content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 `;
 
@@ -73,14 +79,10 @@ export const MenuBar: React.FC = () => {
             history.push(item.path)
           }}
         >
-          <Grid stackable columns={1}>
-            <Grid.Column>
-              <Icon name={item.icon} size="huge" />
-            </Grid.Column>
-            <Grid.Column>
-              <label>{item.text}</label>
-            </Grid.Column>
-          </Grid>
+          <div className="menu-item-content-container">
+            <Icon name={item.icon} />
+            <label>{item.text}</label>
+          </div>
         </StyledItemContainer>
       ))}
     </StyledMenu>
