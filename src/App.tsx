@@ -1,43 +1,50 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Route, Switch, Redirect } from 'react-router-dom';
-import DateTime from './containers/DateTime';
-import Counter from './containers/Counter';
-import NavBar from './components/Navbar';
+import { Search } from 'semantic-ui-react';
+import MenuBar from './components/MenuBar/MenuBar';
+import Order from './containers/Order/Order';
+import Cart from './containers/Cart/Cart';
+import Profile from './containers/Profile/Profile';
 
 export type GenericCallBack = (...args: any[]) => any;
 
-export const StyledDiv = styled.div`
-  text-align: center;
-  background-color: ${props => props.theme.background.pageBackground}
+export const StyledRoot = styled.div`
+  background-color: ${props => props.theme.background.pageBackground};
+  height: 100%;
+  width: 100%;
 `;
 
-export class App extends React.Component {
-  render() {
-    return (
-      <>
-        <div>
-          <NavBar/>
-        </div>
-        <StyledDiv>
-          <Switch>
-            <Route exact path="/counter">
-              <Counter />
-            </Route>
-            <Route exact path="/">
-              <Redirect to="/counter" />
-            </Route>
-            <Route exact path="/datetime">
-              <DateTime />
-            </Route>
-            <Route path="*">
-              <div>not found</div>
-            </Route>
-          </Switch>
-        </StyledDiv>
-      </>
-    );
-  }
+export const StyledDiv = styled.div`
+  height: 90%;
+  width: 100%;
+`;
+
+export const App: React.FC = () => {
+  return (
+    <StyledRoot>
+      <StyledDiv>
+        <Switch>
+          <Route exact path="/order">
+            <Order/>
+          </Route>
+          <Route exact path="/">
+            <Redirect to="/order" />
+          </Route>
+          <Route exact path="/search">
+            <Search/>
+          </Route>
+          <Route exact path="/cart">
+            <Cart/>
+          </Route>
+          <Route exact path="/profile">
+            <Profile/>
+          </Route>
+        </Switch>
+      </StyledDiv>
+      <MenuBar />
+    </StyledRoot>
+  );
 }
 
 export default App;

@@ -4,12 +4,12 @@ import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
 import createSagaMiddleware from "redux-saga";
 import { all, fork } from "redux-saga/effects";
-import App from "./App";
-import { rootReducer } from "./redux";
-import { watchApplicationFunctions } from "./redux/count";
+import App from "../App";
+import { rootReducer } from "../redux";
+import { watchApplicationFunctions } from "../redux/count";
 import { ThemeProvider } from "styled-components";
 import { BrowserRouter } from 'react-router-dom';
-import { lightTheme } from "./themes";
+import { lightTheme } from "../themes";
 
 // init store
 export const initStore = () => {
@@ -26,7 +26,7 @@ export const initStore = () => {
 
 // intl utils
 export async function loadLocaleData(locale: string) {
-  const message = await import(`../lang/${locale}.json`);
+  const message = await import(`../../lang/${locale}.json`);
   return message.default;
 }
 
@@ -46,9 +46,7 @@ export const init = async (locale: string, store) => {
       <Provider store={store}>
         <ThemeProvider theme={lightTheme}>
           <BrowserRouter>
-            <React.StrictMode>
-              <App />
-            </React.StrictMode>
+            <App />
           </BrowserRouter>
         </ThemeProvider>
       </Provider>
