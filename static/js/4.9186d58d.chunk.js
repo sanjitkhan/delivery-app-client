@@ -1,2 +1,0 @@
-(this["webpackJsonpdelivery-app-client"]=this["webpackJsonpdelivery-app-client"]||[]).push([[4],{291:function(e){e.exports=JSON.parse('{"vehicles.ford":"Ford","vehicles.mercedes":"Mercedes"}')}}]);
-//# sourceMappingURL=4.9186d58d.chunk.js.map
