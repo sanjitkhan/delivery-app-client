@@ -29,7 +29,7 @@ const StyledItemContainer = styled.div<{width: number, isActive: boolean}>`
 
   label {
     margin-top: 6px;
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
 
   .menu-item-content-container {
@@ -80,7 +80,7 @@ export const MenuBar: React.FC = () => {
           }}
         >
           <div className="menu-item-content-container">
-            <Icon name={item.icon} />
+            <Icon name={item.icon} size="large" />
             <label>{item.text}</label>
           </div>
         </StyledItemContainer>
