@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { Button, Input, Label } from 'semantic-ui-react';
-import { StyledDiv } from '../App';
 import { 
   decreaseCounter as decreaseCounterAction,
   increaseCounter as increaseCounterAction
@@ -21,14 +20,14 @@ export const Counter: React.FC<CounterProps> = ({
 }: CounterProps) => {
   const [increaseBy, setIncreaseBy] = useState<number>(0)
   return (
-    <StyledDiv>
+    <>
       <Button primary onClick={() => increaseCounter(increaseBy)}>Increase</Button>
       <Input type="number" value={increaseBy} onChange={(e, { value }) => {
         setIncreaseBy(Number(value))
       }}></Input>
       <Button primary onClick={() => decreaseCounter(increaseBy)}>Decrease</Button>
       <Label>{count.count}</Label><br/>
-    </StyledDiv>
+    </>
   );
 };
 

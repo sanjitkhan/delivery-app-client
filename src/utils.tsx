@@ -46,9 +46,7 @@ export const init = async (locale: string, store) => {
       <Provider store={store}>
         <ThemeProvider theme={lightTheme}>
           <BrowserRouter>
-            <React.StrictMode>
-              <App />
-            </React.StrictMode>
+            <App />
           </BrowserRouter>
         </ThemeProvider>
       </Provider>
