@@ -6,7 +6,7 @@ import styled from "styled-components";
 export const StyledMenu = styled.div`
   position: fixed;
   bottom: 0;
-  height: 10%;
+  height: 8%;
   width: 100%;
   display: table;
   padding: 2px;
@@ -17,7 +17,6 @@ export const StyledMenu = styled.div`
 const StyledItemContainer = styled.div<{width: number, isActive: boolean}>`
   display: table-cell;
   width: ${props => props.width}%;
-  // text-align: center;
   color: ${props => props.theme.menu.text};
   padding: 2px;
   vertical-align: middle;
@@ -28,7 +27,7 @@ const StyledItemContainer = styled.div<{width: number, isActive: boolean}>`
   }
 
   label {
-    margin-top: 6px;
+    margin-top: 2px;
     font-size: 0.9em;
   }
 
