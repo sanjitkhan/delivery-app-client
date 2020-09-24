@@ -1,72 +1,62 @@
 import React from "react";
-import { Card } from "semantic-ui-react";
 import styled from "styled-components";
-import CategoryCard, { CategoryCardProps } from "../../../components/CategoryCard/CategoryCard";
-import frozenFoodImg from "../../../assets/images/frozenfoods.jpg"
-import iceCreamImg from "../../../assets/images/icecream.jpg"
-import confectionaryImg from "../../../assets/images/confectionary.jpg"
-import groceriesImg from "../../../assets/images/groceries.jpg"
+import CategoryCard, { backgroundThemeEnum, CategoryCardProps, positionEnum } from "../../../components/CategoryCard/CategoryCard";
+import frozenFoodImg from "../../../assets/images/category_frozenfoods.jpg"
+import iceCreamImg from "../../../assets/images/category_icecream.jpg"
+import confectioneryImg from "../../../assets/images/category_confectionery.jpg"
+import groceriesImg from "../../../assets/images/category_groceries.jpg"
 
-const StyledContainer = styled(Card.Group)`
-  &&& {
-    margin: 15px;
+const StyledContainer = styled.div`
+  margin: 20px 20px;
+  > div {
+    margin: 15px 0px;
   }
-
-  && .card {
-    margin: 10px 0px;
-  }
-
-  && .card:first-child {
+  && div:first-child {
     margin-top: 0px;
-  }
-
-  .card .image {
-    height:15vh;
-    overflow: hidden;
-
-    img {
-      position: relative;
-      top: 15vh;
-      margin-top: -50%;
-    }
   }
 `;
 
 const CategoriesTab: React.FC = () => {
-  const categories: CategoryCardProps[] = [
+  const categories: Omit<CategoryCardProps, 'width'>[] = [
     {
       id: 'ice-cream',
       name: 'Ice Cream',
       image: iceCreamImg,
-      numBrands: 3
+      numBrands: 3,
+      textPosition: positionEnum.RIGHT,
+      backgroundTheme: backgroundThemeEnum.DARK
+    },
+    {
+      id: 'groceries',
+      name: 'Groceries',
+      image: groceriesImg,
+      numBrands: 8,
+      textPosition: positionEnum.LEFT,
+      backgroundTheme: backgroundThemeEnum.LIGHT
     },
     {
       id: 'frozen-foods',
       name: 'Frozen Foods',
       image: frozenFoodImg,
-      numBrands: 5
+      numBrands: 5,
+      textPosition: positionEnum.RIGHT,
+      backgroundTheme: backgroundThemeEnum.DARK
     },
     {
-      id: 'groceries',
-      name: 'Groceries',
-      image: confectionaryImg,
-      numBrands: 8
-    },
-    {
-      id: 'confectionaries',
-      name: 'Confectionaries',
-      image: groceriesImg,
-      numBrands: 7
+      id: 'confectioneries',
+      name: 'Confectioneries',
+      image: confectioneryImg,
+      numBrands: 7,
+      textPosition: positionEnum.LEFT,
+      backgroundTheme: backgroundThemeEnum.LIGHT
     }
   ]
   return (
-    <StyledContainer itemsPerRow={1}>
-      {categories.map(({ id, name, image, numBrands }) => (
+    <StyledContainer>
+      {categories.map(item => (
         <CategoryCard
-          key={id}
-          name={name}
-          image={image}
-          numBrands={numBrands}
+          key={item.id}
+          {...item}
         />
       ))}
     </StyledContainer>

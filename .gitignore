@@ -18,7 +18,8 @@
 .env.test.local
 .env.production.local
 .vscode
-/design
+/designs
+/src/assets/images/hi-res
 *.log
 
 npm-debug.log*
