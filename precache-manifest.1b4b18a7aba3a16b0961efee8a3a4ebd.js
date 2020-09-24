@@ -1,39 +1,39 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "daef69d01fb9b0864b54b0053aa8eca4",
+    "revision": "fa7ba9d4163b88cd6f7bde02755fdb74",
     "url": "/delivery-app-client/index.html"
   },
   {
-    "revision": "7f06b701624d50122c1a",
+    "revision": "9cf9c950f97298568c89",
     "url": "/delivery-app-client/static/css/2.d4178bee.chunk.css"
   },
   {
-    "revision": "fa2b542b96fdba9332a7",
+    "revision": "7e57a675f7eb17e56474",
     "url": "/delivery-app-client/static/css/main.ef7bf322.chunk.css"
   },
   {
-    "revision": "7f06b701624d50122c1a",
-    "url": "/delivery-app-client/static/js/2.90039b69.chunk.js"
+    "revision": "9cf9c950f97298568c89",
+    "url": "/delivery-app-client/static/js/2.8445fb5e.chunk.js"
   },
   {
     "revision": "5bd09eb7f2cf4d145d532d862be18942",
-    "url": "/delivery-app-client/static/js/2.90039b69.chunk.js.LICENSE.txt"
+    "url": "/delivery-app-client/static/js/2.8445fb5e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "fe2f93a7718a03f5a1bd",
-    "url": "/delivery-app-client/static/js/3.4c7d0d73.chunk.js"
+    "revision": "58cb44f281c25f8ae600",
+    "url": "/delivery-app-client/static/js/3.493c964e.chunk.js"
   },
   {
-    "revision": "5b5fecd5ddcb3152ef4e",
-    "url": "/delivery-app-client/static/js/4.07beb09c.chunk.js"
+    "revision": "077500ea7eaec281308e",
+    "url": "/delivery-app-client/static/js/4.79579053.chunk.js"
   },
   {
-    "revision": "fa2b542b96fdba9332a7",
-    "url": "/delivery-app-client/static/js/main.1b5cc442.chunk.js"
+    "revision": "7e57a675f7eb17e56474",
+    "url": "/delivery-app-client/static/js/main.0babfc52.chunk.js"
   },
   {
-    "revision": "9c151ebc7cd5324bf015",
-    "url": "/delivery-app-client/static/js/runtime-main.e55f290e.js"
+    "revision": "c8a405ffd25c6155d332",
+    "url": "/delivery-app-client/static/js/runtime-main.77fa7e57.js"
   },
   {
     "revision": "13db00b7a34fee4d819ab7f9838cc428",
@@ -56,8 +56,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/delivery-app-client/static/media/brand-icons.e8c322de.woff2"
   },
   {
+    "revision": "38cedb4d87c787fa7ccc9c2adc21b5da",
+    "url": "/delivery-app-client/static/media/confectionary.38cedb4d.jpg"
+  },
+  {
     "revision": "9c74e172f87984c48ddf5c8108cabe67",
     "url": "/delivery-app-client/static/media/flags.9c74e172.png"
+  },
+  {
+    "revision": "576f8d7f16d0d80edd1b8ab04f9242b0",
+    "url": "/delivery-app-client/static/media/frozenfoods.576f8d7f.jpg"
+  },
+  {
+    "revision": "853abf40f16a0e0fe1093ad0b758e5e8",
+    "url": "/delivery-app-client/static/media/groceries.853abf40.jpg"
+  },
+  {
+    "revision": "72c7ade603a59582564a53fd35c0790b",
+    "url": "/delivery-app-client/static/media/icecream.72c7ade6.jpg"
   },
   {
     "revision": "0ab54153eeeca0ce03978cc463b257f7",
