@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { Menu } from "semantic-ui-react";
 import { RouteComponentProps, withRouter } from "react-router-dom";

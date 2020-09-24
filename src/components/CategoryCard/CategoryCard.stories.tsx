@@ -1,6 +1,5 @@
 import CategoryCard, { CategoryCardProps } from './CategoryCard';
 import iceCreamImg from "../../assets/images/icecream.jpg"
-import 'semantic-ui-css/semantic.min.css';
 import { addStoryBookElementMeta, addStoryBookElementTemplate } from '../../utils/storybookUtils';
 
 const data: CategoryCardProps = {

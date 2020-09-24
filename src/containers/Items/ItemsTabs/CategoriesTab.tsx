@@ -7,7 +7,30 @@ import iceCreamImg from "../../../assets/images/icecream.jpg"
 import confectionaryImg from "../../../assets/images/confectionary.jpg"
 import groceriesImg from "../../../assets/images/groceries.jpg"
 
-const StyledContainer = styled.div``;
+const StyledContainer = styled(Card.Group)`
+  &&& {
+    margin: 15px;
+  }
+
+  && .card {
+    margin: 10px 0px;
+  }
+
+  && .card:first-child {
+    margin-top: 0px;
+  }
+
+  .card .image {
+    height:15vh;
+    overflow: hidden;
+
+    img {
+      position: relative;
+      top: 15vh;
+      margin-top: -50%;
+    }
+  }
+`;
 
 const CategoriesTab: React.FC = () => {
   const categories: CategoryCardProps[] = [
@@ -16,10 +39,28 @@ const CategoriesTab: React.FC = () => {
       name: 'Ice Cream',
       image: iceCreamImg,
       numBrands: 3
+    },
+    {
+      id: 'frozen-foods',
+      name: 'Frozen Foods',
+      image: frozenFoodImg,
+      numBrands: 5
+    },
+    {
+      id: 'groceries',
+      name: 'Groceries',
+      image: confectionaryImg,
+      numBrands: 8
+    },
+    {
+      id: 'confectionaries',
+      name: 'Confectionaries',
+      image: groceriesImg,
+      numBrands: 7
     }
   ]
   return (
-    <StyledContainer>
+    <StyledContainer itemsPerRow={1}>
       {categories.map(({ id, name, image, numBrands }) => (
         <CategoryCard
           key={id}

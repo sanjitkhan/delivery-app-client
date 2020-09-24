@@ -1,4 +1,5 @@
 import { Meta, Story } from "@storybook/react/types-6-0";
+import 'semantic-ui-css/semantic.min.css';
 
 export const addStoryBookElementMeta = (name: string, Component: any) => {
   return {
