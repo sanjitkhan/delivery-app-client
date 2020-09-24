@@ -10,9 +10,9 @@ describe('MenuBar', () => {
       addAllProviders(<MenuBar />)
     );
     const { getByText } = rendered;
-    expect(getByText(/Order/)).toBeInTheDocument(); // "Order" option
+    expect(getByText(/Item/)).toBeInTheDocument(); // "Order" option
     expect(getByText(/Search/)).toBeInTheDocument(); // "Search" option
-    expect(getByText(/Cart/)).toBeInTheDocument(); // "Cart" option
+    expect(getByText(/Order/)).toBeInTheDocument(); // "Cart" option
     expect(getByText(/Profile/)).toBeInTheDocument(); // "profile" option
     if (rendered) rendered.unmount();
   });
@@ -22,14 +22,14 @@ describe('MenuBar', () => {
     );
     const { getByText } = rendered;
 
-    const OrderDivElement = getByText(/Page 1/);
-    expect(OrderDivElement).toBeInTheDocument();
+    const ItemsScreenElement = getByText(/Categories/); // "categories" tab in items screen
+    expect(ItemsScreenElement).toBeInTheDocument();
     
-    const CartElement = getByText(/Cart/);
-    mouseClick(CartElement);
+    const OrderElement = getByText(/Order/);
+    mouseClick(OrderElement);
 
-    const CartDivElement = getByText(/Page 3/);
-    expect(OrderDivElement).not.toBeInTheDocument();
-    expect(CartDivElement).toBeInTheDocument();
+    const OrderScreenElement = getByText(/Page 3/);
+    expect(ItemsScreenElement).not.toBeInTheDocument();
+    expect(OrderScreenElement).toBeInTheDocument();
   });
 });

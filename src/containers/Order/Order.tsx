@@ -3,7 +3,7 @@ import React from "react";
 const Order: React.FC = () => {
   return (
     <div>
-      Page 1
+      Page 3
     </div>
   );
 };
