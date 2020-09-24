@@ -40,14 +40,14 @@ const StyledItemContainer = styled.div<{width: number, isActive: boolean}>`
 `;
 
 export const MenuBar: React.FC = () => {
-  const [activeItem, setActiveItem] = useState<string>('order');
+  const [activeItem, setActiveItem] = useState<string>('items');
   const history = useHistory();
   const menuItems: any[] = [
     {
-      value: 'order',
-      path: '/order',
+      value: 'items',
+      path: '/items',
       icon: 'food',
-      text: 'Order'
+      text: 'Items'
     },
     {
       value: 'search',
@@ -56,10 +56,10 @@ export const MenuBar: React.FC = () => {
       text: 'Search'
     },
     {
-      value: 'cart',
-      path: '/cart',
+      value: 'order',
+      path: '/order',
       icon: 'shopping cart',
-      text: 'Cart'
+      text: 'Order'
     },
     {
       value: 'profile',
@@ -72,6 +72,7 @@ export const MenuBar: React.FC = () => {
     <StyledMenu>
       {menuItems.map(item => (
         <StyledItemContainer
+          key={item.value}
           width={100/menuItems.length}
           isActive={activeItem === item.value}
           onClick={() => {
