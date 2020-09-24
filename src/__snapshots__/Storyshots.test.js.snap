@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Items/Category Card Simple Card 1`] = `
+<div
+  className="ui card"
+  onClick={[Function]}
+>
+  <div
+    className="image"
+  >
+    <img
+      src="icecream.jpg"
+    />
+  </div>
+  <div
+    className="content"
+  >
+    <div
+      className="header"
+    >
+      Ice Cream
+    </div>
+    <div
+      className="meta"
+    >
+      8 brands
+    </div>
+  </div>
+</div>
+`;
