@@ -7,13 +7,15 @@ const colors: Colors = {
   secondary: '#E0E0E0',
   secondaryLight: '#F0F0F0',
 
-  grey: '#D0D0D0'
+  grey: '#D0D0D0',
+  black: '#000000'
 };
 
 const lightTheme: Theme = {
   colors,
-  background: {
-    pageBackground: colors.body
+  content: {
+    pageBackground: colors.body,
+    text: colors.black
   },
   menu: {
     text: colors.primary,

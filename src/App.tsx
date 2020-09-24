@@ -10,7 +10,7 @@ import ItemsRouter from './routes/ItemsRouter';
 export type GenericCallBack = (...args: any[]) => any;
 
 export const StyledRoot = styled.div`
-  background-color: ${props => props.theme.background.pageBackground};
+  background-color: ${props => props.theme.content.pageBackground};
   height: 100%;
   width: 100%;
 `;
