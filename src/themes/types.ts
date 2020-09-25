@@ -1,30 +1,40 @@
 export interface Colors {
     readonly body: string;
-
-    readonly primary: string;
-    readonly secondary: string;
-    readonly secondaryLight: string;
     
-    readonly grey: string;
-    readonly black: string;
+    readonly grey: ColorGradientLevels;
 
     readonly darkRed: string;
+  
+    readonly primary: BrightnessLevels;
+    readonly secondary: BrightnessLevels;
 }
 
+export interface ColorGradientLevels {
+    [x: number]: string;
+    [y: string]: string;
+}
+
+export interface BrightnessLevels {
+    lighter?: string;
+    light?: string;
+    normal: string;
+    dark?: string;
+    darker?: string;
+}
 
 export interface Theme {
     readonly colors: Colors;
-  
+
     readonly content: Readonly<{
         pageBackground: string;
-        text: string;
+        text: BrightnessLevels;
         border: string;
     }>;
 
     readonly menu: Readonly<{
         text: string;
         border: string;
-        optionBackground: string;
+        optionBackground?: string;
         activeOptionBackground: string;
     }>;
 }

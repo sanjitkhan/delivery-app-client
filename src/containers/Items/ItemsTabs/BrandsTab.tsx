@@ -12,7 +12,7 @@ const StyledContainer = styled.div`
 `;
 
 const BrandsTab: React.FC = () => {
-  const categories: Omit<BrandCardProps, 'width'>[] = [
+  const brands: Omit<BrandCardProps, 'width'>[] = [
     {
       id: 'kwalitywalls',
       name: 'Kwality Walls',
@@ -40,7 +40,7 @@ const BrandsTab: React.FC = () => {
   ]
   return (
     <StyledContainer>
-      {categories.map(item => (
+      {brands.map(item => (
         <BrandCard
           key={item.id}
           width={50}
