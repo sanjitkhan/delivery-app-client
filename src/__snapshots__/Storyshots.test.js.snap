@@ -66,7 +66,7 @@ exports[`Storyshots Items/Brand Card Not Favourited 1`] = `
 
 exports[`Storyshots Items/Category Card Simple Card Left Aligned Light Background 1`] = `
 <div
-  className="sc-gtssRu ImqZc"
+  className="sc-gtssRu gYgAca"
   width={50}
 >
   <img
@@ -89,7 +89,7 @@ exports[`Storyshots Items/Category Card Simple Card Left Aligned Light Backgroun
 
 exports[`Storyshots Items/Category Card Simple Card Right Aligned Dark Background 1`] = `
 <div
-  className="sc-gtssRu bKHojT"
+  className="sc-gtssRu jdIwCN"
   width={50}
 >
   <img
