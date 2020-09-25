@@ -66,7 +66,7 @@ exports[`Storyshots Items/Brand Card Not Favourited 1`] = `
 
 exports[`Storyshots Items/Category Card Simple Card Left Aligned Light Background 1`] = `
 <div
-  className="sc-gtssRu gYgAca"
+  className="sc-gtssRu gFyMBZ"
   width={50}
 >
   <img
@@ -106,6 +106,211 @@ exports[`Storyshots Items/Category Card Simple Card Right Aligned Dark Backgroun
   >
     8
      brands
+  </div>
+</div>
+`;
+
+exports[`Storyshots Items/Item Card Favourited 1`] = `
+<div
+  className="sc-dlnjPT hkXoBx"
+  width={20}
+>
+  <div
+    className="image-container"
+  >
+    <div>
+      <img
+        alt="Ice Cream image"
+        src="brand_kwalitywalls.png"
+      />
+    </div>
+  </div>
+  <div
+    className="details-container"
+  >
+    <div
+      className="brand"
+    >
+      Kwality Walls
+    </div>
+    <div
+      className="name"
+    >
+      Ice Cream
+    </div>
+    <div
+      className="stock"
+    >
+      Available in stock: 
+      8
+    </div>
+    <div
+      className="price"
+    >
+      Rs. 
+      100
+    </div>
+    <i
+      aria-hidden="true"
+      className="red heart large icon"
+      onClick={[Function]}
+    />
+    <div
+      className="add-button-container"
+    >
+      <div
+        className="ui label"
+        onClick={[Function]}
+      >
+        <div
+          className="detail"
+        >
+          -
+        </div>
+        <div
+          className="detail"
+        >
+          8
+        </div>
+        <div
+          className="detail"
+        >
+          +
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Items/Item Card Not Added 1`] = `
+<div
+  className="sc-dlnjPT hkXoBx"
+  width={20}
+>
+  <div
+    className="image-container"
+  >
+    <div>
+      <img
+        alt="Ice Cream image"
+        src="brand_kwalitywalls.png"
+      />
+    </div>
+  </div>
+  <div
+    className="details-container"
+  >
+    <div
+      className="brand"
+    >
+      Kwality Walls
+    </div>
+    <div
+      className="name"
+    >
+      Ice Cream
+    </div>
+    <div
+      className="stock"
+    >
+      Available in stock: 
+      0
+    </div>
+    <div
+      className="price"
+    >
+      Rs. 
+      100
+    </div>
+    <i
+      aria-hidden="true"
+      className="grey heart outline large icon"
+      onClick={[Function]}
+    />
+    <div
+      className="add-button-container"
+    >
+      <button
+        className="ui button"
+        onClick={[Function]}
+      >
+        Add
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Items/Item Card Not Favourited 1`] = `
+<div
+  className="sc-dlnjPT hkXoBx"
+  width={20}
+>
+  <div
+    className="image-container"
+  >
+    <div>
+      <img
+        alt="Ice Cream image"
+        src="brand_kwalitywalls.png"
+      />
+    </div>
+  </div>
+  <div
+    className="details-container"
+  >
+    <div
+      className="brand"
+    >
+      Kwality Walls
+    </div>
+    <div
+      className="name"
+    >
+      Ice Cream
+    </div>
+    <div
+      className="stock"
+    >
+      Available in stock: 
+      8
+    </div>
+    <div
+      className="price"
+    >
+      Rs. 
+      100
+    </div>
+    <i
+      aria-hidden="true"
+      className="grey heart outline large icon"
+      onClick={[Function]}
+    />
+    <div
+      className="add-button-container"
+    >
+      <div
+        className="ui label"
+        onClick={[Function]}
+      >
+        <div
+          className="detail"
+        >
+          -
+        </div>
+        <div
+          className="detail"
+        >
+          8
+        </div>
+        <div
+          className="detail"
+        >
+          +
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;

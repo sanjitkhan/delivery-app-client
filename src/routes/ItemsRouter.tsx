@@ -17,12 +17,12 @@ const ApplicationsRouter: React.FC<ItemsRouterProps> = ({
         render={() => <Items />}
       />
       <Redirect
-        from={path}
+        from={'/items'}
         exact
-        to={`${path}/${ItemsRoutes.CATEGORIES}`}
+        to={`/items/${ItemsRoutes.CATEGORIES}`}
       />
-      <Route path={`${path}/categories`} exact component={CategoriesTab} />
-      <Route path={`${path}/brands`} exact component={BrandsTab} />
+      <Route path={`/items/${ItemsRoutes.CATEGORIES}`} exact component={CategoriesTab} />
+      <Route path={`/items/${ItemsRoutes.BRANDS}`} exact component={BrandsTab} />
     </Switch>
   );
 };

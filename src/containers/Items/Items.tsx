@@ -5,6 +5,7 @@ import { RouteComponentProps, withRouter } from "react-router-dom";
 import CategoriesTab from "./ItemsTabs/CategoriesTab";
 import BrandsTab from "./ItemsTabs/BrandsTab";
 import { getBaseUrl } from "../../routes/routes";
+import ItemsRouter from "../../routes/ItemsRouter";
 
 const StyledMenu = styled(Menu)`
   position: fixed;
@@ -28,7 +29,7 @@ const StyledItemsContainer = styled.div`
 const StyledItem = styled.div<{ isActive: boolean }>`
   margin: 0 10px;
   padding: 5px 5px;
-  border-bottom: 4px solid ${props => props.isActive ? props.theme.colors.primary : 'transparent'};
+  border-bottom: 4px solid ${props => props.isActive ? props.theme.colors.primary.normal : 'transparent'};
   font-size: 110%;
   font-weight: 700;
   display: flex;
@@ -84,7 +85,7 @@ const Items: React.FC<RouteComponentProps<ItemsParams>> = ({
         </StyledItemsContainer>
       </StyledMenu>
       <StyledContent>
-        {menuItems.find(item => item.value === tabName).render}
+        <ItemsRouter/>
       </StyledContent>
     </>
   );
