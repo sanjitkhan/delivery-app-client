@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9808bb6c90e30797a500b69461dcaccb",
+    "revision": "c99559f9c35c069a7b5441479c1e88c4",
     "url": "/delivery-app-client/index.html"
   },
   {
-    "revision": "8ca4cb9d5b881917e389",
+    "revision": "cb9bf483ed056ae4526f",
     "url": "/delivery-app-client/static/css/2.d4178bee.chunk.css"
   },
   {
-    "revision": "40c2741cb0a58e312dad",
+    "revision": "db68294d21cf2cbd71e9",
     "url": "/delivery-app-client/static/css/main.ef7bf322.chunk.css"
   },
   {
-    "revision": "8ca4cb9d5b881917e389",
-    "url": "/delivery-app-client/static/js/2.e87ea3bd.chunk.js"
+    "revision": "cb9bf483ed056ae4526f",
+    "url": "/delivery-app-client/static/js/2.d2042100.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/delivery-app-client/static/js/2.e87ea3bd.chunk.js.LICENSE.txt"
+    "url": "/delivery-app-client/static/js/2.d2042100.chunk.js.LICENSE.txt"
   },
   {
     "revision": "0006e9f04dd013b2a651",
@@ -28,8 +28,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/delivery-app-client/static/js/4.61041dda.chunk.js"
   },
   {
-    "revision": "40c2741cb0a58e312dad",
-    "url": "/delivery-app-client/static/js/main.be0e714f.chunk.js"
+    "revision": "db68294d21cf2cbd71e9",
+    "url": "/delivery-app-client/static/js/main.7e8eb9ca.chunk.js"
   },
   {
     "revision": "2b2341a5175e3a810383",
@@ -76,8 +76,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/delivery-app-client/static/media/category_frozenfoods.0e9e97f3.jpg"
   },
   {
-    "revision": "f38e46dbb44a85ef026b234ee45991b8",
-    "url": "/delivery-app-client/static/media/category_groceries.f38e46db.jpg"
+    "revision": "41b8cbc3be124cfedc392c16ef6778cf",
+    "url": "/delivery-app-client/static/media/category_groceries.41b8cbc3.jpg"
   },
   {
     "revision": "cad9b468b7ac4a88139cb39cda5f5ea7",
