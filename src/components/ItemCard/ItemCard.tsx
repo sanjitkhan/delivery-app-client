@@ -9,7 +9,7 @@ export interface ItemCardProps {
   image: string;
   name: string;
   brand: string;
-  numItems: number;
+  stock: number;
   isFavourited?: boolean;
   setFavourite?: GenericCallBack;
   price: number;
@@ -106,7 +106,7 @@ const ItemCard: React.FC<ItemCardProps> = ({
   image,
   name,
   brand,
-  numItems,
+  stock,
   isFavourited = false,
   price,
   setFavourite = (data: any) => {}
@@ -119,7 +119,7 @@ const ItemCard: React.FC<ItemCardProps> = ({
       <div className="details-container">
         <div className="brand">{brand}</div>
         <div className="name">{name}</div>
-        <div className="stock">Available in stock: {numItems}</div>
+        <div className="stock">Available in stock: {stock}</div>
         <div className="price">Rs. {price}</div>
         <Icon
           name={isFavourited ? 'heart':'heart outline'} 
@@ -128,10 +128,10 @@ const ItemCard: React.FC<ItemCardProps> = ({
           onClick={() => setFavourite} 
         />
         <div className="add-button-container">
-          {numItems === 0 ? <Button>Add</Button> :
+          {stock === 0 ? <Button>Add</Button> :
             <Label>
               <Label.Detail>-</Label.Detail>
-              <Label.Detail>{numItems}</Label.Detail>
+              <Label.Detail>{stock}</Label.Detail>
               <Label.Detail>+</Label.Detail>
             </Label>
           }

@@ -10,11 +10,12 @@ import { watchApplicationFunctions } from "../redux/count";
 import { ThemeProvider } from "styled-components";
 import { BrowserRouter } from 'react-router-dom';
 import { lightTheme } from "../themes";
+import { watchItemsFunctions } from "../redux/items";
 
 // init store
 export const initStore = () => {
   function* rootSaga() {
-    yield all([fork(watchApplicationFunctions)]);
+    yield all([fork(watchApplicationFunctions), fork(watchItemsFunctions)]);
   }
   const sagaMiddleware = createSagaMiddleware()
   const store = createStore(rootReducer, applyMiddleware(sagaMiddleware));

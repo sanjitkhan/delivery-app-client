@@ -1,6 +1,7 @@
 import React from "react";
 import { Redirect, Route, RouteComponentProps, Switch, withRouter } from "react-router-dom";
 import Items from "../containers/Items/Items";
+import ItemsList from "../containers/Items/ItemsList";
 import BrandsTab from "../containers/Items/ItemsTabs/BrandsTab";
 import CategoriesTab from "../containers/Items/ItemsTabs/CategoriesTab";
 import { ItemsRoutes } from "./routes";
@@ -22,6 +23,7 @@ const ApplicationsRouter: React.FC<ItemsRouterProps> = ({
         to={`/items/${ItemsRoutes.CATEGORIES}`}
       />
       <Route path={`/items/${ItemsRoutes.CATEGORIES}`} exact component={CategoriesTab} />
+      <Route path={`/items/temp`} exact component={ItemsList} />
       <Route path={`/items/${ItemsRoutes.BRANDS}`} exact component={BrandsTab} />
     </Switch>
   );

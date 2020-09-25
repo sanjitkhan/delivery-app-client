@@ -8,7 +8,7 @@ const data: ItemCardProps = {
   image: iceCreamImg,
   name: "Ice Cream",
   brand: 'Kwality Walls',
-  numItems: 8,
+  stock: 8,
   price: 100.00
 };
 
@@ -20,5 +20,5 @@ export const Favourited = addStoryBookElementTemplate({
 }, ItemCard);
 export const Not_Added = addStoryBookElementTemplate({
   ...data,
-  numItems: 0
+  stock: 0
 }, ItemCard);
