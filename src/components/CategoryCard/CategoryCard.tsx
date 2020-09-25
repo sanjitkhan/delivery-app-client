@@ -25,9 +25,13 @@ const StyledCardContainer = styled.div<{ width: number, textPosition: positionEn
   width: ${props => props.width}%;
   position: relative;
   cursor: pointer;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
   img {
     width: 100%;
-    border-radius: 10px;
   }
   > div {
     position: absolute;

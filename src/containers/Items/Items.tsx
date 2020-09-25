@@ -9,7 +9,7 @@ import { getBaseUrl } from "../../routes/routes";
 const StyledMenu = styled(Menu)`
   position: fixed;
   width: 100%;
-  height: 5.5%;
+  height: 45px;
   z-index: 9;
   align-items: center;
   border: 0 !important;
@@ -36,7 +36,7 @@ const StyledItem = styled.div<{ isActive: boolean }>`
 `;
 
 const StyledContent = styled.div`
-  padding-top: 40px;
+  padding-top: 45px;
 `;
 
 interface ItemsParams {
