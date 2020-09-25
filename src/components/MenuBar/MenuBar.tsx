@@ -17,7 +17,6 @@ export const StyledMenu = styled.div`
 const StyledItemContainer = styled.div<{width: number, isActive: boolean}>`
   display: table-cell;
   width: ${props => props.width}%;
-  // text-align: center;
   color: ${props => props.theme.menu.text};
   padding: 2px;
   vertical-align: middle;
