@@ -1,39 +1,39 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "963c562179f81bbbb2a2954daeecdad1",
+    "revision": "9808bb6c90e30797a500b69461dcaccb",
     "url": "/delivery-app-client/index.html"
   },
   {
-    "revision": "cf52869ba5ad650a26c7",
+    "revision": "8ca4cb9d5b881917e389",
     "url": "/delivery-app-client/static/css/2.d4178bee.chunk.css"
   },
   {
-    "revision": "ac5abd8b386c04b7e82b",
+    "revision": "40c2741cb0a58e312dad",
     "url": "/delivery-app-client/static/css/main.ef7bf322.chunk.css"
   },
   {
-    "revision": "cf52869ba5ad650a26c7",
-    "url": "/delivery-app-client/static/js/2.8bddd0ad.chunk.js"
+    "revision": "8ca4cb9d5b881917e389",
+    "url": "/delivery-app-client/static/js/2.e87ea3bd.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/delivery-app-client/static/js/2.8bddd0ad.chunk.js.LICENSE.txt"
+    "url": "/delivery-app-client/static/js/2.e87ea3bd.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f2ef71ada2fd218569e0",
-    "url": "/delivery-app-client/static/js/3.d3662031.chunk.js"
+    "revision": "0006e9f04dd013b2a651",
+    "url": "/delivery-app-client/static/js/3.cb3eb9f0.chunk.js"
   },
   {
-    "revision": "730562c98025c8c21a4c",
-    "url": "/delivery-app-client/static/js/4.686b4c21.chunk.js"
+    "revision": "4e1c407918bc31791f5a",
+    "url": "/delivery-app-client/static/js/4.61041dda.chunk.js"
   },
   {
-    "revision": "ac5abd8b386c04b7e82b",
-    "url": "/delivery-app-client/static/js/main.c1b93209.chunk.js"
+    "revision": "40c2741cb0a58e312dad",
+    "url": "/delivery-app-client/static/js/main.be0e714f.chunk.js"
   },
   {
-    "revision": "e5c7a94dd17e51b1a327",
-    "url": "/delivery-app-client/static/js/runtime-main.5b9082e3.js"
+    "revision": "2b2341a5175e3a810383",
+    "url": "/delivery-app-client/static/js/runtime-main.93259867.js"
   },
   {
     "revision": "13db00b7a34fee4d819ab7f9838cc428",
@@ -54,6 +54,18 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "e8c322de9658cbeb8a774b6624167c2c",
     "url": "/delivery-app-client/static/media/brand-icons.e8c322de.woff2"
+  },
+  {
+    "revision": "9170104b20b33f76705c76ac3d6b4397",
+    "url": "/delivery-app-client/static/media/brand_britannia.9170104b.png"
+  },
+  {
+    "revision": "5fb410af16bf4e14ac2fc6ebcf6791e9",
+    "url": "/delivery-app-client/static/media/brand_kwalitywalls.5fb410af.png"
+  },
+  {
+    "revision": "8b146874ce9ac9328acaf64899211c9a",
+    "url": "/delivery-app-client/static/media/brand_mccain.8b146874.png"
   },
   {
     "revision": "05dadc4d9688bea1ca766e5df65d5c24",
