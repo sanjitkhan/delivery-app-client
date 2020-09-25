@@ -18,7 +18,7 @@
 .env.test.local
 .env.production.local
 .vscode
-/designs
+/src/assets/images/designs
 /src/assets/images/hi-res
 *.log
 

@@ -9,7 +9,7 @@ import { getBaseUrl } from "../../routes/routes";
 const StyledMenu = styled(Menu)`
   position: fixed;
   width: 100%;
-  height: 30px;
+  height: 5.5%;
   z-index: 9;
   align-items: center;
   border: 0 !important;
@@ -25,11 +25,14 @@ const StyledItemsContainer = styled.div`
   height: 100%;
 `;
 
-const StyledItem = styled.div<{ width, isActive }>`
-  margin: auto 10px;
-  padding: 10px 5px;
-  ${props => props.isActive && 
-  `border-bottom: 3px solid ${props.theme.colors.primary};`}
+const StyledItem = styled.div<{ isActive: boolean }>`
+  margin: 0 10px;
+  padding: 5px 5px;
+  border-bottom: 4px solid ${props => props.isActive ? props.theme.colors.primary : 'transparent'};
+  font-size: 110%;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
 `;
 
 const StyledContent = styled.div`
@@ -49,9 +52,6 @@ const Items: React.FC<RouteComponentProps<ItemsParams>> = ({
     }
   }
 }:RouteComponentProps<ItemsParams> ) => {
-  
-  console.log("url: ", url);
-  console.log("tabName: ", tabName);
   const menuItems: any[] = [
     {
       value: 'categories',
@@ -73,13 +73,12 @@ const Items: React.FC<RouteComponentProps<ItemsParams>> = ({
           {menuItems.map(item => (
             <StyledItem
               key={item.value}
-              width={70/menuItems.length}
               isActive={tabName === item.value}
               onClick={() => {
                 history.push(`${getBaseUrl(url, tabName) + item.path}`);
               }}
             >
-              <label>{item.text}</label>
+              {item.text}
             </StyledItem>
           ))}
         </StyledItemsContainer>
