@@ -8,14 +8,17 @@ const colors: Colors = {
   secondaryLight: '#F0F0F0',
 
   grey: '#D0D0D0',
-  black: '#000000'
+  black: '#000000',
+
+  darkRed: `#8B0000`
 };
 
 const lightTheme: Theme = {
   colors,
   content: {
     pageBackground: colors.body,
-    text: colors.black
+    text: colors.black,
+    border: colors.grey
   },
   menu: {
     text: colors.primary,

@@ -7,6 +7,8 @@ export interface Colors {
     
     readonly grey: string;
     readonly black: string;
+
+    readonly darkRed: string;
 }
 
 
@@ -16,6 +18,7 @@ export interface Theme {
     readonly content: Readonly<{
         pageBackground: string;
         text: string;
+        border: string;
     }>;
 
     readonly menu: Readonly<{
