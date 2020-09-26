@@ -1,17 +1,23 @@
 import React from "react";
 import { IntlProvider } from "react-intl";
 import { Provider } from "react-redux";
-import { BrowserRouter } from "react-router-dom";
+import { Router } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import configureMockStore from 'redux-mock-store';
 import { lightTheme } from "../themes";
 import { RenderResult } from "@testing-library/react";
+import { createMemoryHistory } from 'history';
+import { BackgroundTheme, TextPosition } from "../redux/categories/data";
+import iceCreamImg from "../assets/images/category_icecream.jpg";
+import britanniaImg from "../assets/images/brand_britannia.png";
 
-export const addRouteProvider = (app: JSX.Element) => {
+export const addRouteProvider = (app: JSX.Element, path?: string) => {
+  const history = createMemoryHistory();
+  history.push(path ? path : '/');
   return (
-    <BrowserRouter>
+    <Router history={history}>
       {app}
-    </BrowserRouter>
+    </Router>
   );
 }
 
@@ -26,8 +32,27 @@ export const addThemeProvider = (app: JSX.Element, theme?: any) => {
 export const addReduxProvider = (app: JSX.Element, store?: any) => {
   const mockStoreConfig = configureMockStore([]);
   const mockStore = store || mockStoreConfig({
-    count: {
-      count: 0
+    categories: {
+      categories: [
+        {
+          id: 'icecream',
+          name: 'Ice Cream',
+          image: iceCreamImg,
+          textPosition: TextPosition.RIGHT,
+          backgroundTheme: BackgroundTheme.DARK
+        }
+      ]
+    },
+    brands: {
+      brands: [
+        {
+          id: 'britannia',
+          name: 'Britannia',
+          image: britanniaImg,
+          numItems: 7,
+          isFavourited: false
+        }
+      ]
     }
   });
   return (
@@ -45,17 +70,17 @@ export const addIntlProvider = (app: JSX.Element, locale?: string) => {
   );
 }
 
-export const addAllProviders = (app: JSX.Element, locale?: string, store?: any, theme?: any) => {
+export const addAllProviders = (app: JSX.Element, locale?: string, store?: any, theme?: any, path?: string) => {
   return (
     addIntlProvider(
       addReduxProvider(
         addRouteProvider(
           addThemeProvider(
             app
-          )
-        )
-      )
-    )
+          , theme || undefined)
+        , path || undefined)
+      , store || undefined)
+    , locale || undefined)
   );
 }
 
