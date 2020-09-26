@@ -76,8 +76,6 @@ const Items: React.FC<RouteComponentProps<ItemsParams>> = ({
               key={item.value}
               isActive={tabName === item.value}
               onClick={() => {
-                console.log(url);
-                console.log(tabName);
                 history.push(`${getBaseUrl(url, tabName) + item.path}`);
               }}
             >

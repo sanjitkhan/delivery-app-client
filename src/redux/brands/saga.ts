@@ -1,14 +1,16 @@
-import { all, fork, put, takeEvery } from 'redux-saga/effects';
+import { all, fork, put, select, takeEvery } from 'redux-saga/effects';
 import { ResponseState } from "../types";
 import { ReceiveBrands } from './actions';
 import { BrandState } from './data';
+import { getBrands } from './selectors';
 import { BrandsFunctionsEnum } from './types';
 
 function* addBrand(params: {type: BrandsFunctionsEnum, payload: BrandState}) {
     try {
         // send call to add Brand
+        const { brands } = yield select(getBrands);
         const response: ResponseState = {
-            data: [],
+            data: [...brands, params.payload],
             status: '',
             error: ''
         }; // addBrand(payload)
@@ -24,8 +26,9 @@ function* addBrand(params: {type: BrandsFunctionsEnum, payload: BrandState}) {
 function* deleteBrand(params: {type: BrandsFunctionsEnum, payload: string}) {
     try {
         // send call to delete Brand
+        const { brands } = yield select(getBrands);
         const response: ResponseState = {
-            data: [],
+            data: brands.filter(({id}) => id !== params.payload),
             status: '',
             error: ''
         }; // deleteBrand(payload)
@@ -41,8 +44,9 @@ function* deleteBrand(params: {type: BrandsFunctionsEnum, payload: string}) {
 function* fetchAllBrands(params: {type: BrandsFunctionsEnum}) {
     try {
         // send call to fetch all Brands
+        const { brands } = yield select(getBrands);
         const response: ResponseState = {
-            data: [],
+            data: brands,
             status: '',
             error: ''
         }; // fetchAllBrands()

@@ -7,9 +7,13 @@ import configureMockStore from 'redux-mock-store';
 import { lightTheme } from "../themes";
 import { RenderResult } from "@testing-library/react";
 import { createMemoryHistory } from 'history';
-import { BackgroundTheme, TextPosition } from "../redux/categories/data";
+import { BackgroundTheme, CategoryState, TextPosition } from "../redux/categories/data";
 import iceCreamImg from "../assets/images/category_icecream.jpg";
 import britanniaImg from "../assets/images/brand_britannia.png";
+import { rootReducer } from "../redux";
+import SagaTester from "redux-saga-tester";
+import { ItemState } from "../redux/items/data";
+import { BrandState } from "../redux/brands/data";
 
 export const addRouteProvider = (app: JSX.Element, path?: string) => {
   const history = createMemoryHistory();
@@ -91,3 +95,33 @@ export const getElementBySelector = (
   rendered: RenderResult,
   selectors: string
 ) => rendered.container.querySelectorAll(selectors);
+
+export interface SagaTesterParams {
+  count?: number, 
+  items?: ItemState[], 
+  categories?: CategoryState[], 
+  brands?: BrandState[]
+} 
+
+export const getSagaTester = ({
+  count = 0,
+  items = [],
+  categories = [],
+  brands = []
+}: SagaTesterParams) => new SagaTester({
+  initialState: {
+    count: {
+      count: count
+    },
+    items: {
+      items: items
+    },
+    categories: {
+      categories: categories
+    },
+    brands: {
+      brands: brands
+    }
+  },
+  reducers: rootReducer
+});
