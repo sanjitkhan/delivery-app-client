@@ -1,6 +1,6 @@
+import { ItemState } from './data';
 import {
     ItemsFunctionsEnum,
-    ItemState,
     ItemsTypes
 } from './types';
 

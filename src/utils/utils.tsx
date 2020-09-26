@@ -54,3 +54,6 @@ export const init = async (locale: string, store) => {
     </IntlProvider>
   );
 };
+
+// other utils
+export type GenericCallBack = (...args: any[]) => any;

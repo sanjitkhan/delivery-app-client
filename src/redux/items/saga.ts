@@ -1,16 +1,21 @@
-import { ItemsFunctionsEnum, ItemState } from "./types";
+import { ItemsFunctionsEnum } from "./types";
 import { all, fork, put, takeEvery } from 'redux-saga/effects';
 import { ReceiveItems } from "./actions";
 import { ResponseState } from "../types";
 import mccainImg from "../../assets/images/brand_mccain.png"
+import { Brand } from "../brands/data";
+import { Category } from "../categories/data";
+import { ItemState } from "./data";
 
 export const d: ItemState = {
     id: 'abcd',
     image: mccainImg,
     name: 'McCain item 1',
-    brand: 'McCain',
+    brand: Brand.MC_CAIN,
+    category: [Category.FROZEN_FOOD],
     stock: 5,
-    price: 100.00
+    price: 100.00,
+    isFavourited: true
 }
 
 function* addItem(params: {type: ItemsFunctionsEnum, payload: ItemState}) {
@@ -34,7 +39,7 @@ function* deleteItem(params: {type: ItemsFunctionsEnum, payload: string}) {
     try {
         // send call to delete item
         const response: ResponseState = {
-            data: {},
+            data: [d,d],
             status: '',
             error: ''
         }; // deleteItem(payload)
@@ -51,7 +56,7 @@ function* fetchItem(params: {type: ItemsFunctionsEnum, payload: string}) {
     try {
         // send call to fetch item
         const response: ResponseState = {
-            data: {},
+            data: [d],
             status: '',
             error: ''
         }; // fetchItem(payload)

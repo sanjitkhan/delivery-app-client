@@ -4,7 +4,7 @@ import { Menu } from "semantic-ui-react";
 import { RouteComponentProps, withRouter } from "react-router-dom";
 import CategoriesTab from "./ItemsTabs/CategoriesTab";
 import BrandsTab from "./ItemsTabs/BrandsTab";
-import { getBaseUrl } from "../../routes/routes";
+import { getBaseUrl } from "../../utils/routesUtils";
 import ItemsRouter from "../../routes/ItemsRouter";
 
 const StyledMenu = styled(Menu)`

@@ -1,13 +1,14 @@
-import BrandCard, { BrandCardProps } from './BrandCard';
+import { BrandCard, BrandCardProps } from './BrandCard';
 import iceCreamImg from "../../assets/images/brand_kwalitywalls.png"
 import { addStoryBookElementMeta, addStoryBookElementTemplate } from '../../utils/storybookUtils';
 
-const data: BrandCardProps = {
+const data: Partial<BrandCardProps> = {
   id: "icecream",
   width: 20,
   image: iceCreamImg,
   name: "Ice Cream",
-  numItems: 8
+  numItems: 8,
+  isFavourited: false
 };
 
 export default addStoryBookElementMeta('Items/Brand Card', BrandCard);

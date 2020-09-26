@@ -1,27 +1,15 @@
 import React from "react";
+import { RouteComponentProps, withRouter } from "react-router-dom";
 import styled from "styled-components";
+import { BackgroundTheme, CategoryState, TextPosition } from "../../redux/categories/data";
+import { AppRoutes } from "../../routes/routes";
 
-export enum positionEnum {
-  RIGHT = 'right',
-  LEFT = 'left'
-}
-
-export enum backgroundThemeEnum {
-  DARK = 'dark',
-  LIGHT = 'light'
-}
-
-export interface CategoryCardProps {
-  id?: string;
+export interface CategoryCardProps extends CategoryState, RouteComponentProps {
   width?: number;
-  image: string;
-  name: string;
-  numBrands: number;
-  textPosition?: positionEnum;
-  backgroundTheme?: backgroundThemeEnum;
+  numItems?: number;
 }
 
-const StyledCardContainer = styled.div<{ width: number, textPosition: positionEnum, backgroundTheme: backgroundThemeEnum }>`
+const StyledCardContainer = styled.div<{ width: number, textPosition: TextPosition, backgroundTheme: BackgroundTheme }>`
   width: ${props => props.width}%;
   position: relative;
   cursor: pointer;
@@ -38,33 +26,40 @@ const StyledCardContainer = styled.div<{ width: number, textPosition: positionEn
     ${props => props.textPosition}: 0;
     padding: 20px;
     font-weight: 500;
-    color: ${props => props.backgroundTheme === backgroundThemeEnum.DARK ? props.theme.content.pageBackground : props.theme.content.text};
+    color: ${props => props.backgroundTheme === BackgroundTheme.DARK ? props.theme.content.pageBackground : props.theme.content.text};
   }
   .name {
     top: 0;
     font-size: 26px;
   }
-  .brands {
+  .items {
     bottom: 0;
     font-size: 20px;
   }
 `;
 
-const CategoryCard: React.FC<CategoryCardProps> = ({
+export const CategoryCard: React.FC<CategoryCardProps> = ({
+  history,
   width = 100,
+  id,
   image,
   name,
-  numBrands,
-  textPosition = positionEnum.LEFT,
-  backgroundTheme = backgroundThemeEnum.LIGHT
+  numItems,
+  textPosition = TextPosition.LEFT,
+  backgroundTheme = BackgroundTheme.LIGHT
 }:CategoryCardProps) => {
   return (
-    <StyledCardContainer width={width} textPosition={textPosition} backgroundTheme={backgroundTheme}>
+    <StyledCardContainer 
+      width={width}
+      textPosition={textPosition}
+      backgroundTheme={backgroundTheme}
+      onClick={() => history.push(AppRoutes.PRODUCTS)}
+    >
       <img alt={name + ' image'} src={image}/>
       <div className="name">{name}</div>
-      <div className="brands">{numBrands} brands</div>
+      <div className="items">{numItems} items</div>
     </StyledCardContainer>
   );
 }
 
-export default CategoryCard;
+export default withRouter(CategoryCard);

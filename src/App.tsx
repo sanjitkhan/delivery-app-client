@@ -6,8 +6,8 @@ import Order from './containers/Order/Order';
 import Profile from './containers/Profile/Profile';
 import Search from './containers/Search/Search';
 import ItemsRouter from './routes/ItemsRouter';
-
-export type GenericCallBack = (...args: any[]) => any;
+import { AppRoutes } from './routes/routes';
+import Products from './containers/Products/Products';
 
 export const StyledRoot = styled.div`
   background-color: ${props => props.theme.content.pageBackground};
@@ -32,13 +32,14 @@ export const App: React.FC = () => {
     <StyledRoot>
       <StyledDiv>
         <Switch>
-          <Route path="/items" component={ItemsRouter} />
+          <Route path={AppRoutes.ITEMS} component={ItemsRouter} />
           <Route exact path="/">
-            <Redirect to="/items" />
+            <Redirect to={AppRoutes.ITEMS} />
           </Route>
-          <Route exact path="/search" component={Search} />
-          <Route exact path="/order" component={Order} />
-          <Route exact path="/profile" component={Profile} />
+          <Route exact path={AppRoutes.PRODUCTS} component={Products} />
+          <Route exact path={AppRoutes.SEARCH} component={Search} />
+          <Route exact path={AppRoutes.ORDER} component={Order} />
+          <Route exact path={AppRoutes.PROFILE} component={Profile} />
         </Switch>
       </StyledDiv>
       <MenuBar />

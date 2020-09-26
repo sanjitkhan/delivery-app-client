@@ -1,4 +1,4 @@
-// import { any } from "../../App";
+import { ItemState, ItemsState } from "./data";
 
 export enum ItemsFunctionsEnum {
     ADD_ITEM = 'ADD_ITEM',
@@ -21,19 +21,6 @@ export interface ItemsFunctions {
     FETCH_ITEM: FetchItem;
     FETCH_ALL_ITEMS: FetchAllItems;
     RECEIVE_ITEMS: ReceiveItems;
-}
-
-export interface ItemsState {
-    items: ItemState[];
-}
-
-export interface ItemState {
-    id?: string;
-    image: string;
-    name: string;
-    brand: string;
-    stock: number;
-    price: number;
 }
 
 interface AddItemAction {

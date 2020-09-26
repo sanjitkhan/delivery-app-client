@@ -3,6 +3,7 @@
 exports[`Storyshots Items/Brand Card Favourited 1`] = `
 <div
   className="sc-bdnylx dHYuvc"
+  onClick={[Function]}
   width={20}
 >
   <div
@@ -35,6 +36,7 @@ exports[`Storyshots Items/Brand Card Favourited 1`] = `
 exports[`Storyshots Items/Brand Card Not Favourited 1`] = `
 <div
   className="sc-bdnylx dHYuvc"
+  onClick={[Function]}
   width={20}
 >
   <div
@@ -66,7 +68,8 @@ exports[`Storyshots Items/Brand Card Not Favourited 1`] = `
 
 exports[`Storyshots Items/Category Card Simple Card Left Aligned Light Background 1`] = `
 <div
-  className="sc-gtssRu gFyMBZ"
+  className="sc-gtssRu iyfytf"
+  onClick={[Function]}
   width={50}
 >
   <img
@@ -79,17 +82,17 @@ exports[`Storyshots Items/Category Card Simple Card Left Aligned Light Backgroun
     Ice Cream
   </div>
   <div
-    className="brands"
+    className="items"
   >
-    8
-     brands
+     items
   </div>
 </div>
 `;
 
 exports[`Storyshots Items/Category Card Simple Card Right Aligned Dark Background 1`] = `
 <div
-  className="sc-gtssRu jdIwCN"
+  className="sc-gtssRu yyjSz"
+  onClick={[Function]}
   width={50}
 >
   <img
@@ -102,17 +105,16 @@ exports[`Storyshots Items/Category Card Simple Card Right Aligned Dark Backgroun
     Ice Cream
   </div>
   <div
-    className="brands"
+    className="items"
   >
-    8
-     brands
+     items
   </div>
 </div>
 `;
 
 exports[`Storyshots Items/Item Card Favourited 1`] = `
 <div
-  className="sc-dlnjPT hkXoBx"
+  className="sc-dlnjPT gRTfBS"
   width={20}
 >
   <div
@@ -131,18 +133,12 @@ exports[`Storyshots Items/Item Card Favourited 1`] = `
     <div
       className="brand"
     >
-      Kwality Walls
+      Kwality walls
     </div>
     <div
       className="name"
     >
       Ice Cream
-    </div>
-    <div
-      className="stock"
-    >
-      Available in stock: 
-      8
     </div>
     <div
       className="price"
@@ -185,7 +181,7 @@ exports[`Storyshots Items/Item Card Favourited 1`] = `
 
 exports[`Storyshots Items/Item Card Not Added 1`] = `
 <div
-  className="sc-dlnjPT hkXoBx"
+  className="sc-dlnjPT gRTfBS"
   width={20}
 >
   <div
@@ -204,18 +200,12 @@ exports[`Storyshots Items/Item Card Not Added 1`] = `
     <div
       className="brand"
     >
-      Kwality Walls
+      Kwality walls
     </div>
     <div
       className="name"
     >
       Ice Cream
-    </div>
-    <div
-      className="stock"
-    >
-      Available in stock: 
-      0
     </div>
     <div
       className="price"
@@ -244,7 +234,7 @@ exports[`Storyshots Items/Item Card Not Added 1`] = `
 
 exports[`Storyshots Items/Item Card Not Favourited 1`] = `
 <div
-  className="sc-dlnjPT hkXoBx"
+  className="sc-dlnjPT gRTfBS"
   width={20}
 >
   <div
@@ -263,18 +253,12 @@ exports[`Storyshots Items/Item Card Not Favourited 1`] = `
     <div
       className="brand"
     >
-      Kwality Walls
+      Kwality walls
     </div>
     <div
       className="name"
     >
       Ice Cream
-    </div>
-    <div
-      className="stock"
-    >
-      Available in stock: 
-      8
     </div>
     <div
       className="price"
