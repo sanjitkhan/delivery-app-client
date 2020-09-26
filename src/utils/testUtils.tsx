@@ -97,22 +97,17 @@ export const getElementBySelector = (
 ) => rendered.container.querySelectorAll(selectors);
 
 export interface SagaTesterParams {
-  count?: number, 
   items?: ItemState[], 
   categories?: CategoryState[], 
   brands?: BrandState[]
 } 
 
 export const getSagaTester = ({
-  count = 0,
   items = [],
   categories = [],
   brands = []
 }: SagaTesterParams) => new SagaTester({
   initialState: {
-    count: {
-      count: count
-    },
     items: {
       items: items
     },

@@ -14,12 +14,12 @@ function* addBrand(params: {type: BrandsFunctionsEnum, payload: BrandState}) {
             status: '',
             error: ''
         }; // addBrand(payload)
-        if (response.error) {
-            throw new Error(response.error);
-        }
+        // if (response.error) {
+        //     throw new Error(response.error);
+        // }
         yield put(ReceiveBrands(response.data));
     } catch (error) {
-        console.log(error);
+        // console.log(error);
     }
 }
 
@@ -32,12 +32,12 @@ function* deleteBrand(params: {type: BrandsFunctionsEnum, payload: string}) {
             status: '',
             error: ''
         }; // deleteBrand(payload)
-        if (response.error) {
-            throw new Error(response.error);
-        }
+        // if (response.error) {
+        //     throw new Error(response.error);
+        // }
         yield put(ReceiveBrands(response.data));
     } catch (error) {
-        console.log(error);
+        // console.log(error);
     }
 }
 
@@ -50,12 +50,12 @@ function* fetchAllBrands(params: {type: BrandsFunctionsEnum}) {
             status: '',
             error: ''
         }; // fetchAllBrands()
-        if (response.error) {
-            throw new Error(response.error);
-        }
+        // if (response.error) {
+        //     throw new Error(response.error);
+        // }
         yield put(ReceiveBrands(response.data));
     } catch (error) {
-        console.log(error);
+        // console.log(error);
     }
 }
 

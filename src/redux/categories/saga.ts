@@ -1,70 +1,61 @@
-import { all, fork, put, takeEvery } from 'redux-saga/effects';
+import { all, fork, put, select, takeEvery } from 'redux-saga/effects';
 import { ResponseState } from "../types";
-import confectioneryImg from "../../assets/images/category_confectionery.jpg"
-import { BackgroundTheme, CategoriesState, CategoryState, TextPosition } from './data';
+import { CategoryState } from './data';
 import { CategoriesFunctionsEnum } from './types';
 import { ReceiveCategories } from './actions';
-
-export const c: CategoriesState = {
-    categories: [
-        {
-            id: 'confectioneries',
-            name: 'Confectioneries',
-            image: confectioneryImg,
-            textPosition: TextPosition.LEFT,
-            backgroundTheme: BackgroundTheme.LIGHT
-        }
-    ]
-};
+import { getCategories } from './selectors';
 
 function* addCategory(params: {type: CategoriesFunctionsEnum, payload: CategoryState}) {
     try {
         // send call to add category
+        const { categories } = yield select(getCategories);
         const response: ResponseState = {
-            data: c,
+            data: [...categories, params.payload],
             status: '',
             error: ''
         }; // addcategory(payload)
-        if (response.error) {
-            throw new Error(response.error);
-        }
+        // if (response.error) {
+        //     throw new Error(response.error);
+        // }
         yield put(ReceiveCategories(response.data));
     } catch (error) {
-        console.log(error);
+        // console.log(error);
     }
 }
 
 function* deleteCategory(params: {type: CategoriesFunctionsEnum, payload: string}) {
     try {
         // send call to delete category
+        const { categories } = yield select(getCategories);
         const response: ResponseState = {
-            data: c,
+            data: categories.filter(({id}) => id !== params.payload),
             status: '',
             error: ''
         }; // deletecategory(payload)
-        if (response.error) {
-            throw new Error(response.error);
-        }
+        // if (response.error) {
+        //     throw new Error(response.error);
+        // }
         yield put(ReceiveCategories(response.data));
     } catch (error) {
-        console.log(error);
+        // console.log(error);
     }
 }
 
 function* fetchAllCategories(params: {type: CategoriesFunctionsEnum}) {
     try {
         // send call to fetch all categories
+        const { categories } = yield select(getCategories);
         const response: ResponseState = {
-            data: c,
+            data: categories,
             status: '',
             error: ''
         }; // fetchAllcategories()
-        if (response.error) {
-            throw new Error(response.error);
-        }
+        // if (response.error) {
+        //     throw new Error(response.error);
+        // }
         yield put(ReceiveCategories(response.data));
     } catch (error) {
-        console.log(error);
+        // console.log(error);
     }
 }
 

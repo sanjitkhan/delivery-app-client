@@ -1,3 +1,3 @@
 import { ApplicationState } from "../types";
 
-export const categories = (state: ApplicationState) => state.categories;
+export const getCategories = (state: ApplicationState) => state.categories;
