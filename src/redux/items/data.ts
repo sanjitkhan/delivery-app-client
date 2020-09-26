@@ -11,7 +11,7 @@ export interface ItemsState {
 }
 
 export interface ItemState {
-  id?: string;
+  id: string;
   image: string;
   name: string;
   brand: Brand;

@@ -1,15 +1,14 @@
-import { BrandState } from "./data"
-import { BrandsFunctionsEnum, BrandsTypes } from "./types"
-import britanniaImg from "../../assets/images/brand_britannia.png"
-import { addBrand, deleteBrand, fetchAllBrands, ReceiveBrands } from "./actions"
-import { watchBrandsFunctions } from "./saga"
+import { BrandState } from "./data";
+import { BrandsFunctionsEnum, BrandsTypes } from "./types";
+import { addBrand, deleteBrand, fetchAllBrands, ReceiveBrands } from "./actions";
+import { watchBrandsFunctions } from "./saga";
 import { brandsReducer } from ".";
-import { getSagaTester } from "../../utils/testUtils"
+import { getSagaTester } from "../../utils/testUtils";
 
 const brand: BrandState = {
   id: 'britannia',
   name: 'Britannia',
-  image: britanniaImg,
+  image: '',
   numItems: 7,
   isFavourited: false
 };

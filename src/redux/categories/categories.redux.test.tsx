@@ -1,16 +1,14 @@
-import { BackgroundTheme, BrandState, CategoryState, TextPosition } from "./data"
-import { BrandsFunctionsEnum, BrandsTypes, CategoriesFunctionsEnum, CategoriesTypes } from "./types"
-import britanniaImg from "../../assets/images/brand_britannia.png"
-import { addBrand, addCategory, deleteBrand, deleteCategory, fetchAllBrands, fetchAllCategories, ReceiveBrands, ReceiveCategories } from "./actions"
-import { watchBrandsFunctions, watchCategoriesFunctions } from "./saga"
-import { brandsReducer, categoriesReducer } from ".";
-import { getSagaTester } from "../../utils/testUtils"
-import iceCreamImg from "../../assets/images/category_icecream.jpg"
+import { BackgroundTheme, CategoryState, TextPosition } from "./data";
+import { CategoriesFunctionsEnum, CategoriesTypes } from "./types";
+import { addCategory, deleteCategory, fetchAllCategories, ReceiveCategories } from "./actions";
+import { watchCategoriesFunctions } from "./saga";
+import { categoriesReducer } from ".";
+import { getSagaTester } from "../../utils/testUtils";
 
 const category: CategoryState = {
   id: 'icecream',
   name: 'Ice Cream',
-  image: iceCreamImg,
+  image: '',
   textPosition: TextPosition.RIGHT,
   backgroundTheme: BackgroundTheme.DARK
 };

@@ -1,3 +1,3 @@
 import { ApplicationState } from "../types";
 
-export const count = (state: ApplicationState) => state.items;
+export const getItems = (state: ApplicationState) => state.items;

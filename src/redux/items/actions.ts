@@ -18,13 +18,6 @@ export function deleteItem(id: string): ItemsTypes {
     }
 }
 
-export function fetchItem(id: string): ItemsTypes {
-    return {
-        type: ItemsFunctionsEnum.FETCH_ITEM,
-        payload: id
-    }
-}
-
 export function fetchAllItems(): ItemsTypes {
     return {
         type: ItemsFunctionsEnum.FETCH_ALL_ITEMS

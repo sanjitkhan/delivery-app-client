@@ -6,7 +6,15 @@ import App from '../../App';
 describe('Items page', () => {
   it('renders items page properly', () => {
     const rendered: RenderResult = render(
-      addAllProviders(<App />)
+      addAllProviders({component: <App />, storeData: {
+        categories: [
+          {
+            id: 'icecream',
+            name: 'Ice Cream',
+            image: ''
+          }
+        ]
+      }})
     );
     const { getByText } = rendered;
     expect(getByText(/Categories/)).toBeInTheDocument(); // "Categories" tab
@@ -17,7 +25,26 @@ describe('Items page', () => {
 
   it('routes to the correct tab on clicking a tabMenu button', () => {
     const rendered: RenderResult = render(
-      addAllProviders(<App />, undefined, undefined, undefined, '/items')
+      addAllProviders({
+        component: <App />,
+        path: '/items',
+        storeData: {
+          categories: [
+            {
+              id: 'icecream',
+              name: 'Ice Cream',
+              image: ''
+            },
+          ],
+          brands: [
+            {
+              id: 'britannia',
+              name: 'Britannia',
+              numItems: 7
+            }
+          ]
+        }
+      })
     );
     const { getByText } = rendered;
     const CategoriesScreenElement = getByText(/Ice Cream/);

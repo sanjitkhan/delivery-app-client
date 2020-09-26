@@ -7,10 +7,10 @@ import App from '../../App';
 describe('MenuBar', () => {
   it('renders menu properly', () => {
     const rendered: RenderResult = render(
-      addAllProviders(<MenuBar />)
+      addAllProviders({ component: <MenuBar /> })
     );
     const { getByText } = rendered;
-    expect(getByText(/Items/)).toBeInTheDocument(); // "(Items)" option
+    expect(getByText(/Items/)).toBeInTheDocument(); // "Items" option
     expect(getByText(/Search/)).toBeInTheDocument(); // "Search" option
     expect(getByText(/Order/)).toBeInTheDocument(); // "Order" option
     expect(getByText(/Profile/)).toBeInTheDocument(); // "Profile" option
@@ -18,7 +18,7 @@ describe('MenuBar', () => {
   });
   it('routes to the correct page on clicking a menu button', () => {
     const rendered: RenderResult = render(
-      addAllProviders(<App />)
+      addAllProviders({ component: <App /> })
     );
     const { getByText } = rendered;
 
