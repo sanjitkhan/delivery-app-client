@@ -3,13 +3,11 @@ import { Redirect, Route, RouteComponentProps, Switch, withRouter } from "react-
 import Items from "../containers/Items/Items";
 import BrandsTab from "../containers/Items/ItemsTabs/BrandsTab";
 import CategoriesTab from "../containers/Items/ItemsTabs/CategoriesTab";
-import { ItemsRoutes } from "./routes";
+import { AppRoutes, ItemsRoutes } from "./routes";
 
-interface ItemsRouterProps extends RouteComponentProps {}
-
-const ApplicationsRouter: React.FC<ItemsRouterProps> = ({
+const ApplicationsRouter: React.FC<RouteComponentProps> = ({
   match: { path }
-}: ItemsRouterProps) => {
+}: RouteComponentProps) => {
   return (
     <Switch>
       <Route
@@ -17,12 +15,12 @@ const ApplicationsRouter: React.FC<ItemsRouterProps> = ({
         render={() => <Items />}
       />
       <Redirect
-        from={'/items'}
+        from={AppRoutes.ITEMS}
         exact
-        to={`/items/${ItemsRoutes.CATEGORIES}`}
+        to={AppRoutes.ITEMS + ItemsRoutes.CATEGORIES}
       />
-      <Route path={`/items/${ItemsRoutes.CATEGORIES}`} exact component={CategoriesTab} />
-      <Route path={`/items/${ItemsRoutes.BRANDS}`} exact component={BrandsTab} />
+      <Route path={AppRoutes.ITEMS + ItemsRoutes.CATEGORIES} exact component={CategoriesTab} />
+      <Route path={AppRoutes.ITEMS + ItemsRoutes.BRANDS} exact component={BrandsTab} />
     </Switch>
   );
 };

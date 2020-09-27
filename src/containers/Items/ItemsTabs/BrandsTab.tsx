@@ -1,43 +1,27 @@
 import React from "react";
-import BrandCard, { BrandCardProps } from "../../../components/BrandCard/BrandCard";
-import kwalitywallsImg from "../../../assets/images/brand_kwalitywalls.png"
-import britanniaImg from "../../../assets/images/brand_britannia.png"
-import godrejImg from "../../../assets/images/brand_godrej.png"
-import mccainImg from "../../../assets/images/brand_mccain.png"
+import BrandCard from "../../../components/BrandCard/BrandCard";
 import styled from "styled-components";
+import { 
+  fetchAllBrands as fetchAllBrandsAction,
+  addBrand as addBrandAction
+ } from "../../../redux/brands/actions";
+import { connect } from "react-redux";
+import { BrandsState } from "../../../redux/brands/data";
+import { BrandsActions } from "../../../redux/brands/types";
+import { ApplicationState } from "../../../redux/types";
+
+interface BrandsTabProps extends BrandsState, Partial<BrandsActions> {}
 
 const StyledContainer = styled.div`
   display: flex;
   flex-flow: wrap;
 `;
 
-const BrandsTab: React.FC = () => {
-  const brands: Omit<BrandCardProps, 'width'>[] = [
-    {
-      id: 'kwalitywalls',
-      name: 'Kwality Walls',
-      image: kwalitywallsImg,
-      numItems: 3
-    },
-    {
-      id: 'godrej',
-      name: 'Godrej',
-      image: godrejImg,
-      numItems: 8
-    },
-    {
-      id: 'mccain',
-      name: 'McCain',
-      image: mccainImg,
-      numItems: 5
-    },
-    {
-      id: 'britannia',
-      name: 'Britannia',
-      image: britanniaImg,
-      numItems: 7
-    }
-  ]
+const BrandsTab: React.FC<BrandsTabProps> = ({
+  brands,
+  addBrand,
+  fetchAllBrands
+}:BrandsTabProps) => {
   return (
     <StyledContainer>
       {brands.map(item => (
@@ -51,4 +35,21 @@ const BrandsTab: React.FC = () => {
   );
 }
 
-export default BrandsTab;
+function mapStateToProps(
+  state: ApplicationState
+): BrandsState {
+  const { brands } = state;
+  return {
+    brands: brands.brands
+  };
+}
+  
+const mapActionToProps: Partial<BrandsActions> = {
+  addBrand: addBrandAction,
+  fetchAllBrands: fetchAllBrandsAction
+};
+
+export default connect(
+  mapStateToProps,
+  mapActionToProps
+ )(BrandsTab);

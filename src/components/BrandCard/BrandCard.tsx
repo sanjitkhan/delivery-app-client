@@ -1,16 +1,12 @@
 import React from "react";
+import { RouteComponentProps, withRouter } from "react-router-dom";
 import { Icon } from "semantic-ui-react";
 import styled from "styled-components";
-import { GenericCallBack } from "../../App";
+import { BrandState } from "../../redux/brands/data";
+import { AppRoutes } from "../../routes/routes";
 
-export interface BrandCardProps {
-  id?: string;
+export interface BrandCardProps extends BrandState, RouteComponentProps {
   width?: number;
-  image: string;
-  name: string;
-  numItems: number;
-  isFavourited?: boolean;
-  setFavourite?: GenericCallBack;
 }
 
 const StyledCardContainer = styled.div<{ width: number }>`
@@ -49,16 +45,16 @@ const StyledCardContainer = styled.div<{ width: number }>`
   }
 `;
 
-const BrandCard: React.FC<BrandCardProps> = ({
+export const BrandCard: React.FC<BrandCardProps> = ({
+  history,
   width = 100,
   image,
   name,
   numItems,
-  isFavourited = false,
-  setFavourite = (data: any) => {}
+  isFavourited = false
 }:BrandCardProps) => {
   return (
-    <StyledCardContainer width={width}>
+    <StyledCardContainer width={width} onClick={() => history.push(AppRoutes.PRODUCTS)}>
       <div className="image-container">
         <img alt={name + ' image'} src={image}/>
       </div>
@@ -68,10 +64,10 @@ const BrandCard: React.FC<BrandCardProps> = ({
         name={isFavourited ? 'heart':'heart outline'} 
         color={isFavourited ? 'red':'grey'} 
         size="large" 
-        onClick={() => setFavourite} 
+        onClick={() => {}} 
       />
     </StyledCardContainer>
   );
 }
 
-export default BrandCard;
+export default withRouter(BrandCard);

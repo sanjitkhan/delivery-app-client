@@ -1,55 +1,46 @@
 import React from "react";
-import CategoryCard, { backgroundThemeEnum, CategoryCardProps, positionEnum } from "../../../components/CategoryCard/CategoryCard";
-import frozenFoodImg from "../../../assets/images/category_frozenfoods.jpg"
-import iceCreamImg from "../../../assets/images/category_icecream.jpg"
-import confectioneryImg from "../../../assets/images/category_confectionery.jpg"
-import groceriesImg from "../../../assets/images/category_groceries.jpg"
+import CategoryCard from "../../../components/CategoryCard/CategoryCard";
+import { CategoriesState } from "../../../redux/categories/data";
+import { CategoriesActions } from "../../../redux/categories/types";
+import { ApplicationState } from "../../../redux/types";
+import { 
+  fetchAllCategories as fetchAllCategoriesAction,
+  addCategory as addCategoryAction
+ } from "../../../redux/categories/actions";
+import { connect } from "react-redux";
 
-const CategoriesTab: React.FC = () => {
-  const categories: Omit<CategoryCardProps, 'width'>[] = [
-    {
-      id: 'ice-cream',
-      name: 'Ice Cream',
-      image: iceCreamImg,
-      numBrands: 3,
-      textPosition: positionEnum.RIGHT,
-      backgroundTheme: backgroundThemeEnum.DARK
-    },
-    {
-      id: 'groceries',
-      name: 'Groceries',
-      image: groceriesImg,
-      numBrands: 8,
-      textPosition: positionEnum.LEFT,
-      backgroundTheme: backgroundThemeEnum.LIGHT
-    },
-    {
-      id: 'frozen-foods',
-      name: 'Frozen Foods',
-      image: frozenFoodImg,
-      numBrands: 5,
-      textPosition: positionEnum.RIGHT,
-      backgroundTheme: backgroundThemeEnum.DARK
-    },
-    {
-      id: 'confectioneries',
-      name: 'Confectioneries',
-      image: confectioneryImg,
-      numBrands: 7,
-      textPosition: positionEnum.LEFT,
-      backgroundTheme: backgroundThemeEnum.LIGHT
-    }
-  ]
+interface CategoriesTabProps extends CategoriesState, Partial<CategoriesActions> {}
+
+const CategoriesTab: React.FC<CategoriesTabProps> = ({
+  categories,
+}:CategoriesTabProps) => {
   return (
     <div>
-      {categories.map(item => (
+      {categories.map(category => (
         <CategoryCard
-          key={item.id}
-          {...item}
+          key={category.id}
+          {...category}
         />
       ))}
     </div>
   );
 }
 
-export default CategoriesTab;
+function mapStateToProps(
+  state: ApplicationState
+): CategoriesState {
+  const { categories } = state;
+  return {
+    categories: categories.categories
+  };
+}
+  
+const mapActionToProps: Partial<CategoriesActions> = {
+  addCategory: addCategoryAction,
+  fetchAllCategories: fetchAllCategoriesAction
+};
+
+export default connect(
+  mapStateToProps,
+  mapActionToProps
+ )(CategoriesTab);

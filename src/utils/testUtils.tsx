@@ -1,17 +1,32 @@
 import React from "react";
 import { IntlProvider } from "react-intl";
 import { Provider } from "react-redux";
-import { BrowserRouter } from "react-router-dom";
+import { Router } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import configureMockStore from 'redux-mock-store';
 import { lightTheme } from "../themes";
 import { RenderResult } from "@testing-library/react";
+import { createMemoryHistory } from 'history';
+import { CategoryState } from "../redux/categories/data";
+import { rootReducer } from "../redux";
+import SagaTester from "redux-saga-tester";
+import { ItemState } from "../redux/items/data";
+import { BrandState } from "../redux/brands/data";
+import { CombinedState } from "redux";
 
-export const addRouteProvider = (app: JSX.Element) => {
+interface StoreParams {
+  items?: ItemState[], 
+  categories?: CategoryState[], 
+  brands?: BrandState[]
+}
+
+export const addRouteProvider = (app: JSX.Element, path?: string) => {
+  const history = createMemoryHistory();
+  history.push(path ? path : '/');
   return (
-    <BrowserRouter>
+    <Router history={history}>
       {app}
-    </BrowserRouter>
+    </Router>
   );
 }
 
@@ -23,11 +38,22 @@ export const addThemeProvider = (app: JSX.Element, theme?: any) => {
   );
 }
 
-export const addReduxProvider = (app: JSX.Element, store?: any) => {
-  const mockStoreConfig = configureMockStore([]);
-  const mockStore = store || mockStoreConfig({
-    count: {
-      count: 0
+export const addReduxProvider = (app: JSX.Element, {
+  items = [],
+  categories = [],
+  brands = []
+}: StoreParams) => {
+  const middlewares = [];
+  const mockStoreConfig = configureMockStore(middlewares);
+  const mockStore = mockStoreConfig({
+    items: {
+      items: items
+    },
+    categories: {
+      categories: categories
+    },
+    brands: {
+      brands: brands
     }
   });
   return (
@@ -45,17 +71,31 @@ export const addIntlProvider = (app: JSX.Element, locale?: string) => {
   );
 }
 
-export const addAllProviders = (app: JSX.Element, locale?: string, store?: any, theme?: any) => {
+interface ProvidersParams {
+  component: JSX.Element;
+  locale?: string;
+  storeData?: StoreParams;
+  theme?: any;
+  path?: string;
+}
+
+export const addAllProviders = ({
+  component,
+  locale = undefined,
+  storeData = {},
+  theme = undefined,
+  path = ''
+}: ProvidersParams) => {
   return (
     addIntlProvider(
       addReduxProvider(
         addRouteProvider(
           addThemeProvider(
-            app
-          )
-        )
-      )
-    )
+            component
+          , theme)
+        , path)
+      , storeData)
+    , locale)
   );
 }
 
@@ -66,3 +106,22 @@ export const getElementBySelector = (
   rendered: RenderResult,
   selectors: string
 ) => rendered.container.querySelectorAll(selectors);
+
+export const getSagaTester = ({
+  items = [],
+  categories = [],
+  brands = []
+}: StoreParams) => new SagaTester({
+  initialState: {
+    items: {
+      items: items
+    },
+    categories: {
+      categories: categories
+    },
+    brands: {
+      brands: brands
+    }
+  },
+  reducers: rootReducer as CombinedState<any>
+});

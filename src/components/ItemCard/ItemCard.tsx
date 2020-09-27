@@ -1,18 +1,10 @@
 import React from "react";
 import { Button, Icon, Label } from "semantic-ui-react";
 import styled from "styled-components";
-import { GenericCallBack } from "../../App";
+import { ItemState } from "../../redux/items/data";
 
-export interface ItemCardProps {
-  id?: string;
+export interface ItemCardProps extends ItemState {
   width?: number;
-  image: string;
-  name: string;
-  brand: string;
-  numItems: number;
-  isFavourited?: boolean;
-  setFavourite?: GenericCallBack;
-  price: number;
 }
 
 const StyledCardContainer = styled.div<{ width: number }>`
@@ -30,8 +22,8 @@ const StyledCardContainer = styled.div<{ width: number }>`
     overflow: hidden;
     > div {
       position: relative;
-      top: 10px;
-      width: 90%;
+      top: 15px;
+      width: 80%;
       height: 160px;
       display: flex;
       flex-direction: column;
@@ -48,6 +40,7 @@ const StyledCardContainer = styled.div<{ width: number }>`
   .details-container {
     width: 60%;
     padding: 10px;
+    padding-left: 0;
     position: relative;
     i {
       position: absolute;
@@ -98,6 +91,10 @@ const StyledCardContainer = styled.div<{ width: number }>`
       font-size: 90%;
       margin-top: 5px;
     }
+    .price {
+      font-weight: 900;
+      margin-top: 10px;
+    }
   }
 `;
 
@@ -106,10 +103,9 @@ const ItemCard: React.FC<ItemCardProps> = ({
   image,
   name,
   brand,
-  numItems,
-  isFavourited = false,
-  price,
-  setFavourite = (data: any) => {}
+  stock,
+  isFavourited,
+  price
 }:ItemCardProps) => {
   return (
     <StyledCardContainer width={width}>
@@ -119,19 +115,19 @@ const ItemCard: React.FC<ItemCardProps> = ({
       <div className="details-container">
         <div className="brand">{brand}</div>
         <div className="name">{name}</div>
-        <div className="stock">Available in stock: {numItems}</div>
+        {/* <div className="stock">Available in stock: {stock}</div> */}
         <div className="price">Rs. {price}</div>
         <Icon
           name={isFavourited ? 'heart':'heart outline'} 
           color={isFavourited ? 'red':'grey'} 
           size="large" 
-          onClick={() => setFavourite} 
+          onClick={() => {}} 
         />
         <div className="add-button-container">
-          {numItems === 0 ? <Button>Add</Button> :
+          {stock === 0 ? <Button>Add</Button> :
             <Label>
               <Label.Detail>-</Label.Detail>
-              <Label.Detail>{numItems}</Label.Detail>
+              <Label.Detail>{stock}</Label.Detail>
               <Label.Detail>+</Label.Detail>
             </Label>
           }

@@ -7,18 +7,18 @@ import App from '../../App';
 describe('MenuBar', () => {
   it('renders menu properly', () => {
     const rendered: RenderResult = render(
-      addAllProviders(<MenuBar />)
+      addAllProviders({ component: <MenuBar /> })
     );
     const { getByText } = rendered;
-    expect(getByText(/Item/)).toBeInTheDocument(); // "Order" option
+    expect(getByText(/Items/)).toBeInTheDocument(); // "Items" option
     expect(getByText(/Search/)).toBeInTheDocument(); // "Search" option
-    expect(getByText(/Order/)).toBeInTheDocument(); // "Cart" option
-    expect(getByText(/Profile/)).toBeInTheDocument(); // "profile" option
+    expect(getByText(/Order/)).toBeInTheDocument(); // "Order" option
+    expect(getByText(/Profile/)).toBeInTheDocument(); // "Profile" option
     if (rendered) rendered.unmount();
   });
   it('routes to the correct page on clicking a menu button', () => {
     const rendered: RenderResult = render(
-      addAllProviders(<App />)
+      addAllProviders({ component: <App /> })
     );
     const { getByText } = rendered;
 

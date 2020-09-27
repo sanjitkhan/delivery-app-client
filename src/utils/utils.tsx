@@ -6,15 +6,17 @@ import createSagaMiddleware from "redux-saga";
 import { all, fork } from "redux-saga/effects";
 import App from "../App";
 import { rootReducer } from "../redux";
-import { watchApplicationFunctions } from "../redux/count";
 import { ThemeProvider } from "styled-components";
 import { BrowserRouter } from 'react-router-dom';
 import { lightTheme } from "../themes";
+import { watchItemsFunctions } from "../redux/items";
+import { watchBrandsFunctions } from "../redux/brands";
+import { watchCategoriesFunctions } from "../redux/categories";
 
 // init store
 export const initStore = () => {
   function* rootSaga() {
-    yield all([fork(watchApplicationFunctions)]);
+    yield all([fork(watchItemsFunctions), fork(watchBrandsFunctions), fork(watchCategoriesFunctions)]);
   }
   const sagaMiddleware = createSagaMiddleware()
   const store = createStore(rootReducer, applyMiddleware(sagaMiddleware));
@@ -53,3 +55,6 @@ export const init = async (locale: string, store) => {
     </IntlProvider>
   );
 };
+
+// other utils
+export type GenericCallBack = (...args: any[]) => any;

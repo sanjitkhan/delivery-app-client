@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { Icon } from "semantic-ui-react";
 import styled from "styled-components";
+import { AppRoutes } from "../../routes/routes";
 
 export const StyledMenu = styled.div`
   position: fixed;
@@ -44,25 +45,25 @@ export const MenuBar: React.FC = () => {
   const menuItems: any[] = [
     {
       value: 'items',
-      path: '/items',
+      path: AppRoutes.ITEMS,
       icon: 'food',
       text: 'Items'
     },
     {
       value: 'search',
-      path: '/search',
+      path: AppRoutes.SEARCH,
       icon: 'search',
       text: 'Search'
     },
     {
       value: 'order',
-      path: '/order',
+      path: AppRoutes.ORDER,
       icon: 'shopping cart',
       text: 'Order'
     },
     {
       value: 'profile',
-      path: '/profile',
+      path: AppRoutes.PROFILE,
       icon: 'user',
       text: 'Profile'
     }
