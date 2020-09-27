@@ -85,7 +85,7 @@ export const addAllProviders = ({
   storeData = {},
   theme = undefined,
   path = ''
-}) => {
+}: ProvidersParams) => {
   return (
     addIntlProvider(
       addReduxProvider(

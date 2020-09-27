@@ -4,7 +4,7 @@ import groceriesImg from "../../assets/images/category_groceries.jpg"
 import { addStoryBookElementMeta, addStoryBookElementTemplate } from '../../utils/storybookUtils';
 import { BackgroundTheme, TextPosition } from '../../redux/categories/data';
 
-const data: Partial<CategoryCardProps> = {
+const data: Omit<CategoryCardProps, 'location' | 'match' | 'history'> = {
   id: "icecream",
   width: 50,
   image: iceCreamImg,

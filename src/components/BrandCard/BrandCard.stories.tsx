@@ -2,7 +2,7 @@ import { BrandCard, BrandCardProps } from './BrandCard';
 import iceCreamImg from "../../assets/images/brand_kwalitywalls.png"
 import { addStoryBookElementMeta, addStoryBookElementTemplate } from '../../utils/storybookUtils';
 
-const data: Partial<BrandCardProps> = {
+const data: Omit<BrandCardProps, 'location' | 'match' | 'history'> = {
   id: "icecream",
   width: 20,
   image: iceCreamImg,

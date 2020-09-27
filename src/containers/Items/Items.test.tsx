@@ -2,6 +2,7 @@ import React from 'react';
 import { render, RenderResult } from '@testing-library/react';
 import { addAllProviders, mouseClick } from '../../utils/testUtils';
 import App from '../../App';
+import { BackgroundTheme, TextPosition } from '../../redux/categories/data';
 
 describe('Items page', () => {
   it('renders items page properly', () => {
@@ -11,7 +12,9 @@ describe('Items page', () => {
           {
             id: 'icecream',
             name: 'Ice Cream',
-            image: ''
+            image: '',
+            textPosition: TextPosition.RIGHT,
+            backgroundTheme: BackgroundTheme.LIGHT
           }
         ]
       }})
@@ -33,15 +36,22 @@ describe('Items page', () => {
             {
               id: 'icecream',
               name: 'Ice Cream',
-              image: ''
+              image: '',
+              textPosition: TextPosition.RIGHT,
+              backgroundTheme: BackgroundTheme.LIGHT
             },
           ],
           brands: [
             {
               id: 'britannia',
               name: 'Britannia',
-              numItems: 7
+              numItems: 7,
+              image: '',
+              isFavourited: false
             }
+          ],
+          items: [
+
           ]
         }
       })

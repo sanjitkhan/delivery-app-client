@@ -2,6 +2,7 @@ import React from 'react';
 import { render, RenderResult } from '@testing-library/react';
 import { addAllProviders } from '../../../utils/testUtils';
 import CategoriesTab from './CategoriesTab';
+import { TextPosition, BackgroundTheme } from '../../../redux/categories/data';
 
 describe('Categories tab', () => {
   it('renders the categories correctly', () => {
@@ -11,17 +12,23 @@ describe('Categories tab', () => {
           {
             id: 'icecream',
             name: 'Ice Cream',
-            image: ''
+            image: '',
+            textPosition: TextPosition.RIGHT,
+            backgroundTheme: BackgroundTheme.LIGHT
           },
           {
             id: 'frozenfoods',
             name: 'Frozen Foods',
-            image: ''
+            image: '',
+            textPosition: TextPosition.RIGHT,
+            backgroundTheme: BackgroundTheme.LIGHT
           },
           {
             id: 'groceries',
             name: 'Groceries',
-            image: ''
+            image: '',
+            textPosition: TextPosition.RIGHT,
+            backgroundTheme: BackgroundTheme.LIGHT
           }
         ]
       }})
