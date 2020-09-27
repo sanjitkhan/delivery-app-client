@@ -4,10 +4,10 @@ import confectioneryImg from "../../assets/images/category_confectionery.jpg"
 import groceriesImg from "../../assets/images/category_groceries.jpg"
 
 export enum Category {
-  ICE_CREAM = 'Ice Cream',
-  GROCERY = 'Grocery',
-  CONFECTIONERY = 'Confectionery',
-  FROZEN_FOOD = 'Frozen Food'
+  ICE_CREAM = 'icecream',
+  GROCERY = 'grocery',
+  CONFECTIONERY = 'confectionery',
+  FROZEN_FOOD = 'frozenfood'
 }
 
 export enum TextPosition {

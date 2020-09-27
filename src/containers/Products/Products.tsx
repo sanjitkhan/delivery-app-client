@@ -18,7 +18,7 @@ const StyledContainer = styled.div`
   flex-flow: wrap;
 `;
 
-export interface ProductsProps extends ItemsState, FiltersState, Partial<FiltersActions> {}
+export interface ProductsProps extends ItemsState, FiltersState, Partial<FiltersActions>, Partial<ItemsActions> {}
 
 const Products: React.FC<ProductsProps> = ({
   items,

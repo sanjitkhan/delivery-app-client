@@ -1,17 +1,28 @@
-import ItemCard, { ItemCardProps } from './ItemCard';
+import { ItemCard, ItemCardProps } from './ItemCard';
 import iceCreamImg from "../../assets/images/brand_kwalitywalls.png"
 import { addStoryBookElementMeta, addStoryBookElementTemplate } from '../../utils/storybookUtils';
 import { Brand } from '../../redux/brands/data';
+import { Category } from '../../redux/categories/data';
 
-const data: Partial<ItemCardProps> = {
-  id: "icecream",
+const data: Omit<ItemCardProps, 'location' | 'match' | 'history'> = {
+  id: Category.ICE_CREAM,
   width: 20,
   image: iceCreamImg,
-  name: "Ice Cream",
+  name: "Item 1",
   brand: Brand.KWALITY_WALLS,
+  categories: [Category.ICE_CREAM],
   stock: 8,
-  price: 100.00,
-  isFavourited: false
+  price: 50.00,
+  isFavourited: false,
+  brands: [
+    {
+      id: Brand.KWALITY_WALLS,
+      name: 'Kwality Walls',
+      image: '',
+      numItems: 3,
+      isFavourited: false
+    }
+  ]
 };
 
 export default addStoryBookElementMeta('Items/Item Card', ItemCard);

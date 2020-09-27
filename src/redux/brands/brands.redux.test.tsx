@@ -1,4 +1,4 @@
-import { BrandState } from "./data";
+import { Brand, BrandState } from "./data";
 import { BrandsFunctionsEnum, BrandsTypes } from "./types";
 import { addBrand, deleteBrand, fetchAllBrands, ReceiveBrands } from "./actions";
 import { watchBrandsFunctions } from "./saga";
@@ -6,7 +6,7 @@ import { brandsReducer } from ".";
 import { getSagaTester } from "../../utils/testUtils";
 
 const brand: BrandState = {
-  id: 'britannia',
+  id: Brand.BRITANNIA,
   name: 'Britannia',
   image: '',
   numItems: 7,

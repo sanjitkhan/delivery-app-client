@@ -4,10 +4,10 @@ import godrejImg from "../../assets/images/brand_godrej.png"
 import mccainImg from "../../assets/images/brand_mccain.png"
 
 export enum Brand {
-  MC_CAIN = 'McCain',
-  BRITANNIA = 'Britannia',
-  KWALITY_WALLS = 'Kwality walls',
-  GODREJ = 'Godrej'
+  MC_CAIN = 'mccain',
+  BRITANNIA = 'britannia',
+  KWALITY_WALLS = 'kwalitywalls',
+  GODREJ = 'godrej'
 }
 
 export interface BrandsState {

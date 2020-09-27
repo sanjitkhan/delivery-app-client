@@ -11,9 +11,9 @@ import { CategoryState } from "../redux/categories/data";
 import { rootReducer } from "../redux";
 import SagaTester from "redux-saga-tester";
 import { ItemState } from "../redux/items/data";
-import { BrandState } from "../redux/brands/data";
 import { CombinedState } from "redux";
 import { FilterState } from "../redux/filters/data";
+import { BrandState } from "../redux/brands/data";
 
 interface StoreParams {
   items?: ItemState[];
@@ -22,7 +22,7 @@ interface StoreParams {
   filters?: FilterState;
 }
 
-export const addRouteProvider = (app: JSX.Element, path?: string) => {
+export const addRouteProvider = (app: any, path?: string) => {
   const history = createMemoryHistory();
   history.push(path ? path : '/');
   return (
@@ -32,7 +32,7 @@ export const addRouteProvider = (app: JSX.Element, path?: string) => {
   );
 }
 
-export const addThemeProvider = (app: JSX.Element, theme?: any) => {
+export const addThemeProvider = (app: any, theme?: any) => {
   return (
     <ThemeProvider theme={theme || lightTheme}>
       {app}
@@ -40,36 +40,31 @@ export const addThemeProvider = (app: JSX.Element, theme?: any) => {
   );
 }
 
-export const addReduxProvider = (app: JSX.Element, {
-  items = [],
-  categories = [],
-  brands = [],
-  filters = {}
-}: StoreParams) => {
+export const addReduxProvider = (app: any, store: any) => {
   const middlewares = [];
   const mockStoreConfig = configureMockStore(middlewares);
   const mockStore = mockStoreConfig({
     items: {
-      items: items
+      items: []
     },
     categories: {
-      categories: categories
+      categories: []
     },
     brands: {
-      brands: brands
+      brands: []
     },
     filters: {
-      filters: filters
+      filters: {}
     }
   });
   return (
-    <Provider store={mockStore}>
+    <Provider store={store || mockStore}>
       {app}
     </Provider>
   );
 }
 
-export const addIntlProvider = (app: JSX.Element, locale?: string) => {
+export const addIntlProvider = (app: any, locale?: string) => {
   return (
     <IntlProvider locale={locale || 'en'}>
       {app}
@@ -78,9 +73,9 @@ export const addIntlProvider = (app: JSX.Element, locale?: string) => {
 }
 
 interface ProvidersParams {
-  component: JSX.Element;
+  component: any;
   locale?: string;
-  storeData?: StoreParams;
+  store?: any;
   theme?: any;
   path?: string;
 }
@@ -88,7 +83,7 @@ interface ProvidersParams {
 export const addAllProviders = ({
   component,
   locale = undefined,
-  storeData = {},
+  store = undefined,
   theme = undefined,
   path = ''
 }: ProvidersParams) => {
@@ -100,7 +95,7 @@ export const addAllProviders = ({
             component
           , theme)
         , path)
-      , storeData)
+      , store)
     , locale)
   );
 }

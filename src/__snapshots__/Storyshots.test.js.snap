@@ -124,7 +124,7 @@ exports[`Storyshots Items/Item Card Favourited 1`] = `
   >
     <div>
       <img
-        alt="Ice Cream image"
+        alt="Item 1 image"
         src="brand_kwalitywalls.png"
       />
     </div>
@@ -135,18 +135,18 @@ exports[`Storyshots Items/Item Card Favourited 1`] = `
     <div
       className="brand"
     >
-      Kwality walls
+      Kwality Walls
     </div>
     <div
       className="name"
     >
-      Ice Cream
+      Item 1
     </div>
     <div
       className="price"
     >
       Rs. 
-      100
+      50
     </div>
     <i
       aria-hidden="true"
@@ -191,7 +191,7 @@ exports[`Storyshots Items/Item Card Not Added 1`] = `
   >
     <div>
       <img
-        alt="Ice Cream image"
+        alt="Item 1 image"
         src="brand_kwalitywalls.png"
       />
     </div>
@@ -202,18 +202,18 @@ exports[`Storyshots Items/Item Card Not Added 1`] = `
     <div
       className="brand"
     >
-      Kwality walls
+      Kwality Walls
     </div>
     <div
       className="name"
     >
-      Ice Cream
+      Item 1
     </div>
     <div
       className="price"
     >
       Rs. 
-      100
+      50
     </div>
     <i
       aria-hidden="true"
@@ -244,7 +244,7 @@ exports[`Storyshots Items/Item Card Not Favourited 1`] = `
   >
     <div>
       <img
-        alt="Ice Cream image"
+        alt="Item 1 image"
         src="brand_kwalitywalls.png"
       />
     </div>
@@ -255,18 +255,18 @@ exports[`Storyshots Items/Item Card Not Favourited 1`] = `
     <div
       className="brand"
     >
-      Kwality walls
+      Kwality Walls
     </div>
     <div
       className="name"
     >
-      Ice Cream
+      Item 1
     </div>
     <div
       className="price"
     >
       Rs. 
-      100
+      50
     </div>
     <i
       aria-hidden="true"
