@@ -28,6 +28,7 @@ export interface CategoryState {
   id: Category;
   image: string;
   name: string;
+  numItems: number;
   textPosition: TextPosition;
   backgroundTheme: BackgroundTheme;
 }
@@ -38,6 +39,7 @@ export const initialCategoriesState: CategoriesState = {
       id: Category.ICE_CREAM,
       name: 'Ice Cream',
       image: iceCreamImg,
+      numItems: 6,
       textPosition: TextPosition.RIGHT,
       backgroundTheme: BackgroundTheme.DARK
     },
@@ -45,6 +47,7 @@ export const initialCategoriesState: CategoriesState = {
       id: Category.GROCERY,
       name: 'Groceries',
       image: groceriesImg,
+      numItems: 6,
       textPosition: TextPosition.LEFT,
       backgroundTheme: BackgroundTheme.LIGHT
     },
@@ -52,6 +55,7 @@ export const initialCategoriesState: CategoriesState = {
       id: Category.FROZEN_FOOD,
       name: 'Frozen Foods',
       image: frozenFoodImg,
+      numItems: 6,
       textPosition: TextPosition.RIGHT,
       backgroundTheme: BackgroundTheme.DARK
     },
@@ -59,6 +63,7 @@ export const initialCategoriesState: CategoriesState = {
       id: Category.CONFECTIONERY,
       name: 'Confectioneries',
       image: confectioneryImg,
+      numItems: 6,
       textPosition: TextPosition.LEFT,
       backgroundTheme: BackgroundTheme.LIGHT
     }

@@ -9,6 +9,7 @@ const categoryCardProps: Omit<CategoryCardProps, 'location' | 'match' | 'history
   id: Category.ICE_CREAM,
   width: 50,
   image: '',
+  numItems: 6,
   name: "Ice Cream",
   textPosition: TextPosition.RIGHT,
   backgroundTheme: BackgroundTheme.DARK

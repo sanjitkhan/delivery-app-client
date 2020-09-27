@@ -16,7 +16,6 @@ export interface CategoryCardProps extends
   Partial<FiltersActions> 
 {
   width?: number;
-  numItems?: number;
 }
 
 const StyledCardContainer = styled.div<{ 

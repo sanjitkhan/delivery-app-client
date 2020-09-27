@@ -18,6 +18,7 @@ describe('Categories tab', () => {
             id: Category.ICE_CREAM,
             name: 'Ice Cream',
             image: '',
+            numItems: 6,
             textPosition: TextPosition.RIGHT,
             backgroundTheme: BackgroundTheme.LIGHT
           },
@@ -25,6 +26,7 @@ describe('Categories tab', () => {
             id: Category.FROZEN_FOOD,
             name: 'Frozen Foods',
             image: '',
+            numItems: 6,
             textPosition: TextPosition.RIGHT,
             backgroundTheme: BackgroundTheme.LIGHT
           },
@@ -32,6 +34,7 @@ describe('Categories tab', () => {
             id: Category.GROCERY,
             name: 'Groceries',
             image: '',
+            numItems: 6,
             textPosition: TextPosition.RIGHT,
             backgroundTheme: BackgroundTheme.LIGHT
           }

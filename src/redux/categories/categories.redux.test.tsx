@@ -1,4 +1,4 @@
-import { BackgroundTheme, CategoryState, TextPosition } from "./data";
+import { BackgroundTheme, Category, CategoryState, TextPosition } from "./data";
 import { CategoriesFunctionsEnum, CategoriesTypes } from "./types";
 import { addCategory, deleteCategory, fetchAllCategories, ReceiveCategories } from "./actions";
 import { watchCategoriesFunctions } from "./saga";
@@ -6,9 +6,10 @@ import { categoriesReducer } from ".";
 import { getSagaTester } from "../../utils/testUtils";
 
 const category: CategoryState = {
-  id: 'icecream',
+  id: Category.ICE_CREAM,
   name: 'Ice Cream',
   image: '',
+  numItems: 6,
   textPosition: TextPosition.RIGHT,
   backgroundTheme: BackgroundTheme.DARK
 };
