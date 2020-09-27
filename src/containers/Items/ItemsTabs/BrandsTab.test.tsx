@@ -3,10 +3,18 @@ import { render, RenderResult } from '@testing-library/react';
 import { addAllProviders } from '../../../utils/testUtils';
 import BrandsTab from './BrandsTab';
 import { Brand } from '../../../redux/brands/data';
+import configureMockStore from 'redux-mock-store';
 describe('Brands tab', () => {
   it('renders the brands correctly', () => {
-    const rendered: RenderResult = render(
-      addAllProviders({component: <BrandsTab />, storeData: {
+    const mockStoreConfig = configureMockStore();
+    const mockStore = mockStoreConfig({
+      items: {
+        items: []
+      },
+      categories: {
+        categories: []
+      },
+      brands: {
         brands: [
           {
             id: Brand.KWALITY_WALLS,
@@ -23,7 +31,13 @@ describe('Brands tab', () => {
             isFavourited: false
           }
         ]
-      }})
+      },
+      filters: {
+        filters: {}
+      }
+    });
+    const rendered: RenderResult = render(
+      addAllProviders({component: <BrandsTab />, store: mockStore})
     );
     const { getByText } = rendered;
     expect(getByText(/Kwality Walls/)).toBeInTheDocument();

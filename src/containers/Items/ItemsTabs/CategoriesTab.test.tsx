@@ -2,36 +2,50 @@ import React from 'react';
 import { render, RenderResult } from '@testing-library/react';
 import { addAllProviders } from '../../../utils/testUtils';
 import CategoriesTab from './CategoriesTab';
-import { TextPosition, BackgroundTheme } from '../../../redux/categories/data';
+import { TextPosition, BackgroundTheme, Category } from '../../../redux/categories/data';
+import configureMockStore from 'redux-mock-store';
 
 describe('Categories tab', () => {
   it('renders the categories correctly', () => {
-    const rendered: RenderResult = render(
-      addAllProviders({component: <CategoriesTab />, storeData: {
+    const mockStoreConfig = configureMockStore();
+    const mockStore = mockStoreConfig({
+      items: {
+        items: []
+      },
+      categories: {
         categories: [
           {
-            id: 'icecream',
+            id: Category.ICE_CREAM,
             name: 'Ice Cream',
             image: '',
             textPosition: TextPosition.RIGHT,
             backgroundTheme: BackgroundTheme.LIGHT
           },
           {
-            id: 'frozenfoods',
+            id: Category.FROZEN_FOOD,
             name: 'Frozen Foods',
             image: '',
             textPosition: TextPosition.RIGHT,
             backgroundTheme: BackgroundTheme.LIGHT
           },
           {
-            id: 'groceries',
+            id: Category.GROCERY,
             name: 'Groceries',
             image: '',
             textPosition: TextPosition.RIGHT,
             backgroundTheme: BackgroundTheme.LIGHT
           }
         ]
-      }})
+      },
+      brands: {
+        brands: []
+      },
+      filters: {
+        filters: {}
+      }
+    });
+    const rendered: RenderResult = render(
+      addAllProviders({component: <CategoriesTab />, store: mockStore})
     );
     const { getByText } = rendered;
     expect(getByText(/Ice Cream/)).toBeInTheDocument();

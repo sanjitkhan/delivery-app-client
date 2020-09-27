@@ -1,9 +1,12 @@
 import React from "react";
+import { connect } from "react-redux";
 import { Button, Icon, Label } from "semantic-ui-react";
 import styled from "styled-components";
+import { BrandsState, BrandState } from "../../redux/brands/data";
 import { ItemState } from "../../redux/items/data";
+import { ApplicationState } from "../../redux/types";
 
-export interface ItemCardProps extends ItemState {
+export interface ItemCardProps extends ItemState, BrandsState {
   width?: number;
 }
 
@@ -98,22 +101,27 @@ const StyledCardContainer = styled.div<{ width: number }>`
   }
 `;
 
-const ItemCard: React.FC<ItemCardProps> = ({
+export const ItemCard: React.FC<ItemCardProps> = ({
   width = 100,
   image,
   name,
   brand,
   stock,
   isFavourited,
-  price
+  price,
+  brands
 }:ItemCardProps) => {
+  const getBrandName = (id: BrandState['id']) => {
+    return brands.find(brand => brand.id === id)?.name || ''
+  }
+
   return (
     <StyledCardContainer width={width}>
       <div className="image-container">
         <div><img alt={name + ' image'} src={image}/></div>
       </div>
       <div className="details-container">
-        <div className="brand">{brand}</div>
+        <div className="brand">{getBrandName(brand)}</div>
         <div className="name">{name}</div>
         {/* <div className="stock">Available in stock: {stock}</div> */}
         <div className="price">Rs. {price}</div>
@@ -137,4 +145,16 @@ const ItemCard: React.FC<ItemCardProps> = ({
   );
 }
 
-export default ItemCard;
+function mapStateToProps(
+  state: ApplicationState
+): BrandsState {
+  const { brands } = state;
+  return {
+    brands: brands.brands
+  };
+}
+
+export default connect(
+  mapStateToProps,
+  {}
+ )(ItemCard);

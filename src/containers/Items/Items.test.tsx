@@ -2,22 +2,39 @@ import React from 'react';
 import { render, RenderResult } from '@testing-library/react';
 import { addAllProviders, mouseClick } from '../../utils/testUtils';
 import App from '../../App';
-import { BackgroundTheme, TextPosition } from '../../redux/categories/data';
+import { BackgroundTheme, Category, CategoryState, TextPosition } from '../../redux/categories/data';
+import configureMockStore from 'redux-mock-store';
+import { Brand } from '../../redux/brands/data';
+
+const categories: CategoryState[] = [
+  {
+    id: Category.ICE_CREAM,
+    name: 'Ice Cream',
+    image: '',
+    textPosition: TextPosition.RIGHT,
+    backgroundTheme: BackgroundTheme.LIGHT
+  }
+];
 
 describe('Items page', () => {
   it('renders items page properly', () => {
+    const mockStoreConfig = configureMockStore();
+    const mockStore = mockStoreConfig({
+      items: {
+        items: []
+      },
+      categories: {
+        categories: categories
+      },
+      brands: {
+        brands: []
+      },
+      filters: {
+        filters: {}
+      }
+    });
     const rendered: RenderResult = render(
-      addAllProviders({component: <App />, storeData: {
-        categories: [
-          {
-            id: 'icecream',
-            name: 'Ice Cream',
-            image: '',
-            textPosition: TextPosition.RIGHT,
-            backgroundTheme: BackgroundTheme.LIGHT
-          }
-        ]
-      }})
+      addAllProviders({component: <App />, store: mockStore})
     );
     const { getByText } = rendered;
     expect(getByText(/Categories/)).toBeInTheDocument(); // "Categories" tab
@@ -27,33 +44,34 @@ describe('Items page', () => {
   });
 
   it('routes to the correct tab on clicking a tabMenu button', () => {
+    const mockStoreConfig = configureMockStore();
+    const mockStore = mockStoreConfig({
+      items: {
+        items: []
+      },
+      categories: {
+        categories: categories
+      },
+      brands: {
+        brands: [
+          {
+            id: Brand.BRITANNIA,
+            name: 'Britannia',
+            numItems: 7,
+            image: '',
+            isFavourited: false
+          }
+        ]
+      },
+      filters: {
+        filters: {}
+      }
+    });
     const rendered: RenderResult = render(
       addAllProviders({
         component: <App />,
         path: '/items',
-        storeData: {
-          categories: [
-            {
-              id: 'icecream',
-              name: 'Ice Cream',
-              image: '',
-              textPosition: TextPosition.RIGHT,
-              backgroundTheme: BackgroundTheme.LIGHT
-            },
-          ],
-          brands: [
-            {
-              id: 'britannia',
-              name: 'Britannia',
-              numItems: 7,
-              image: '',
-              isFavourited: false
-            }
-          ],
-          items: [
-
-          ]
-        }
+        store: mockStore
       })
     );
     const { getByText } = rendered;
