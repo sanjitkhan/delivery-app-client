@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/delivery-app-client/static/css/main.ef7bf322.chunk.css",
-    "main.js": "/delivery-app-client/static/js/main.dbbda722.chunk.js",
-    "main.js.map": "/delivery-app-client/static/js/main.dbbda722.chunk.js.map",
-    "runtime-main.js": "/delivery-app-client/static/js/runtime-main.93259867.js",
-    "runtime-main.js.map": "/delivery-app-client/static/js/runtime-main.93259867.js.map",
+    "main.js": "/delivery-app-client/static/js/main.6d05a97f.chunk.js",
+    "main.js.map": "/delivery-app-client/static/js/main.6d05a97f.chunk.js.map",
+    "runtime-main.js": "/delivery-app-client/static/js/runtime-main.fd081240.js",
+    "runtime-main.js.map": "/delivery-app-client/static/js/runtime-main.fd081240.js.map",
     "static/css/2.d4178bee.chunk.css": "/delivery-app-client/static/css/2.d4178bee.chunk.css",
-    "static/js/2.d2042100.chunk.js": "/delivery-app-client/static/js/2.d2042100.chunk.js",
-    "static/js/2.d2042100.chunk.js.map": "/delivery-app-client/static/js/2.d2042100.chunk.js.map",
-    "static/js/3.cb3eb9f0.chunk.js": "/delivery-app-client/static/js/3.cb3eb9f0.chunk.js",
-    "static/js/3.cb3eb9f0.chunk.js.map": "/delivery-app-client/static/js/3.cb3eb9f0.chunk.js.map",
-    "static/js/4.61041dda.chunk.js": "/delivery-app-client/static/js/4.61041dda.chunk.js",
-    "static/js/4.61041dda.chunk.js.map": "/delivery-app-client/static/js/4.61041dda.chunk.js.map",
+    "static/js/2.6345fe19.chunk.js": "/delivery-app-client/static/js/2.6345fe19.chunk.js",
+    "static/js/2.6345fe19.chunk.js.map": "/delivery-app-client/static/js/2.6345fe19.chunk.js.map",
+    "static/js/3.50795136.chunk.js": "/delivery-app-client/static/js/3.50795136.chunk.js",
+    "static/js/3.50795136.chunk.js.map": "/delivery-app-client/static/js/3.50795136.chunk.js.map",
+    "static/js/4.814c4c43.chunk.js": "/delivery-app-client/static/js/4.814c4c43.chunk.js",
+    "static/js/4.814c4c43.chunk.js.map": "/delivery-app-client/static/js/4.814c4c43.chunk.js.map",
     "index.html": "/delivery-app-client/index.html",
-    "precache-manifest.740f72ae22bb1a488749409f22add762.js": "/delivery-app-client/precache-manifest.740f72ae22bb1a488749409f22add762.js",
+    "precache-manifest.8ad2caf2f207b790c9bf00a9298f1733.js": "/delivery-app-client/precache-manifest.8ad2caf2f207b790c9bf00a9298f1733.js",
     "service-worker.js": "/delivery-app-client/service-worker.js",
     "static/css/2.d4178bee.chunk.css.map": "/delivery-app-client/static/css/2.d4178bee.chunk.css.map",
     "static/css/main.ef7bf322.chunk.css.map": "/delivery-app-client/static/css/main.ef7bf322.chunk.css.map",
-    "static/js/2.d2042100.chunk.js.LICENSE.txt": "/delivery-app-client/static/js/2.d2042100.chunk.js.LICENSE.txt",
+    "static/js/2.6345fe19.chunk.js.LICENSE.txt": "/delivery-app-client/static/js/2.6345fe19.chunk.js.LICENSE.txt",
     "static/media/semantic.min.css": "/delivery-app-client/static/media/outline-icons.ef60a4f6.woff",
     "static/media/brand_britannia.png": "/delivery-app-client/static/media/brand_britannia.9170104b.png",
     "static/media/brand_kwalitywalls.png": "/delivery-app-client/static/media/brand_kwalitywalls.5fb410af.png",
@@ -28,10 +28,10 @@
     "static/media/category_icecream.jpg": "/delivery-app-client/static/media/category_icecream.cad9b468.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.93259867.js",
+    "static/js/runtime-main.fd081240.js",
     "static/css/2.d4178bee.chunk.css",
-    "static/js/2.d2042100.chunk.js",
+    "static/js/2.6345fe19.chunk.js",
     "static/css/main.ef7bf322.chunk.css",
-    "static/js/main.dbbda722.chunk.js"
+    "static/js/main.6d05a97f.chunk.js"
   ]
 }

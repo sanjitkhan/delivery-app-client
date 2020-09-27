@@ -1,39 +1,39 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "33ea2374f6f29d991ffdf13e9db97273",
+    "revision": "72ef30c5857737bd350c122f8137b038",
     "url": "/delivery-app-client/index.html"
   },
   {
-    "revision": "cb9bf483ed056ae4526f",
+    "revision": "b309705b99ffdd13c438",
     "url": "/delivery-app-client/static/css/2.d4178bee.chunk.css"
   },
   {
-    "revision": "d908b0adb0a91a7c84c6",
+    "revision": "3a7fd36ff18d92d33621",
     "url": "/delivery-app-client/static/css/main.ef7bf322.chunk.css"
   },
   {
-    "revision": "cb9bf483ed056ae4526f",
-    "url": "/delivery-app-client/static/js/2.d2042100.chunk.js"
+    "revision": "b309705b99ffdd13c438",
+    "url": "/delivery-app-client/static/js/2.6345fe19.chunk.js"
   },
   {
-    "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/delivery-app-client/static/js/2.d2042100.chunk.js.LICENSE.txt"
+    "revision": "5bd09eb7f2cf4d145d532d862be18942",
+    "url": "/delivery-app-client/static/js/2.6345fe19.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0006e9f04dd013b2a651",
-    "url": "/delivery-app-client/static/js/3.cb3eb9f0.chunk.js"
+    "revision": "a16c5975b6e7317ad1ef",
+    "url": "/delivery-app-client/static/js/3.50795136.chunk.js"
   },
   {
-    "revision": "4e1c407918bc31791f5a",
-    "url": "/delivery-app-client/static/js/4.61041dda.chunk.js"
+    "revision": "353a6d9e5ef3cbcd8c86",
+    "url": "/delivery-app-client/static/js/4.814c4c43.chunk.js"
   },
   {
-    "revision": "d908b0adb0a91a7c84c6",
-    "url": "/delivery-app-client/static/js/main.dbbda722.chunk.js"
+    "revision": "3a7fd36ff18d92d33621",
+    "url": "/delivery-app-client/static/js/main.6d05a97f.chunk.js"
   },
   {
-    "revision": "2b2341a5175e3a810383",
-    "url": "/delivery-app-client/static/js/runtime-main.93259867.js"
+    "revision": "713cea022c0b483c40ba",
+    "url": "/delivery-app-client/static/js/runtime-main.fd081240.js"
   },
   {
     "revision": "13db00b7a34fee4d819ab7f9838cc428",
