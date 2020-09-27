@@ -25,7 +25,7 @@ export interface CategoriesState {
 }
 
 export interface CategoryState {
-  id: string;
+  id: Category;
   image: string;
   name: string;
   textPosition: TextPosition;
@@ -35,28 +35,28 @@ export interface CategoryState {
 export const initialCategoriesState: CategoriesState = {
   categories: [
     {
-      id: 'icecream',
+      id: Category.ICE_CREAM,
       name: 'Ice Cream',
       image: iceCreamImg,
       textPosition: TextPosition.RIGHT,
       backgroundTheme: BackgroundTheme.DARK
     },
     {
-      id: 'groceries',
+      id: Category.GROCERY,
       name: 'Groceries',
       image: groceriesImg,
       textPosition: TextPosition.LEFT,
       backgroundTheme: BackgroundTheme.LIGHT
     },
     {
-      id: 'frozen-foods',
+      id: Category.FROZEN_FOOD,
       name: 'Frozen Foods',
       image: frozenFoodImg,
       textPosition: TextPosition.RIGHT,
       backgroundTheme: BackgroundTheme.DARK
     },
     {
-      id: 'confectioneries',
+      id: Category.CONFECTIONERY,
       name: 'Confectioneries',
       image: confectioneryImg,
       textPosition: TextPosition.LEFT,

@@ -5,7 +5,6 @@ import mccainImg from "../../assets/images/brand_mccain.png"
 import { Brand } from "../brands/data";
 import { Category } from "../categories/data";
 
-
 export interface ItemsState {
   items: ItemState[];
 }
@@ -15,7 +14,7 @@ export interface ItemState {
   image: string;
   name: string;
   brand: Brand;
-  category: Category[]
+  categories: Category[]
   stock: number;
   price: number;
   isFavourited: boolean;
@@ -28,7 +27,7 @@ export const initialState: ItemsState = {
       image: mccainImg,
       name: 'McCain item 1',
       brand: Brand.MC_CAIN,
-      category: [Category.FROZEN_FOOD],
+      categories: [Category.FROZEN_FOOD],
       stock: 5,
       price: 100.00,
       isFavourited: true
@@ -38,7 +37,7 @@ export const initialState: ItemsState = {
       image: mccainImg,
       name: 'McCain item 2',
       brand: Brand.MC_CAIN,
-      category: [Category.FROZEN_FOOD],
+      categories: [Category.FROZEN_FOOD],
       stock: 15,
       price: 150.00,
       isFavourited: false
@@ -48,7 +47,7 @@ export const initialState: ItemsState = {
       image: godrejImg,
       name: 'Godrej item 1',
       brand: Brand.GODREJ,
-      category: [Category.FROZEN_FOOD],
+      categories: [Category.FROZEN_FOOD],
       stock: 3,
       price: 200.00,
       isFavourited: false
@@ -58,7 +57,7 @@ export const initialState: ItemsState = {
       image: godrejImg,
       name: 'Godrej item 2',
       brand: Brand.GODREJ,
-      category: [Category.FROZEN_FOOD],
+      categories: [Category.FROZEN_FOOD],
       stock: 32,
       price: 250.00,
       isFavourited: false
@@ -68,7 +67,7 @@ export const initialState: ItemsState = {
       image: godrejImg,
       name: 'Godrej item 3',
       brand: Brand.GODREJ,
-      category: [Category.GROCERY],
+      categories: [Category.GROCERY],
       stock: 32,
       price: 250.00,
       isFavourited: false
@@ -78,7 +77,7 @@ export const initialState: ItemsState = {
       image: kwalitywallsImg,
       name: 'Kwality Walls item 1',
       brand: Brand.KWALITY_WALLS,
-      category: [Category.ICE_CREAM],
+      categories: [Category.ICE_CREAM],
       stock: 12,
       price: 50.00,
       isFavourited: true
@@ -88,7 +87,7 @@ export const initialState: ItemsState = {
       image: kwalitywallsImg,
       name: 'Kwality Walls item 2',
       brand: Brand.KWALITY_WALLS,
-      category: [Category.ICE_CREAM],
+      categories: [Category.ICE_CREAM],
       stock: 31,
       price: 80.00,
       isFavourited: false
@@ -98,7 +97,7 @@ export const initialState: ItemsState = {
       image: britanniaImg,
       name: 'Britannia item 1',
       brand: Brand.BRITANNIA,
-      category: [Category.CONFECTIONERY],
+      categories: [Category.CONFECTIONERY],
       stock: 97,
       price: 30.00,
       isFavourited: false
@@ -108,7 +107,7 @@ export const initialState: ItemsState = {
       image: britanniaImg,
       name: 'Britannia item 2',
       brand: Brand.BRITANNIA,
-      category: [Category.CONFECTIONERY],
+      categories: [Category.CONFECTIONERY],
       stock: 31,
       price: 20.00,
       isFavourited: true

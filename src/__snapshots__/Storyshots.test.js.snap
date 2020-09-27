@@ -10,14 +10,14 @@ exports[`Storyshots Items/Brand Card Favourited 1`] = `
     className="image-container"
   >
     <img
-      alt="Ice Cream image"
+      alt="Kwality Walls image"
       src="brand_kwalitywalls.png"
     />
   </div>
   <div
     className="name"
   >
-    Ice Cream
+    Kwality Walls
   </div>
   <div
     className="items"
@@ -43,14 +43,14 @@ exports[`Storyshots Items/Brand Card Not Favourited 1`] = `
     className="image-container"
   >
     <img
-      alt="Ice Cream image"
+      alt="Kwality Walls image"
       src="brand_kwalitywalls.png"
     />
   </div>
   <div
     className="name"
   >
-    Ice Cream
+    Kwality Walls
   </div>
   <div
     className="items"
@@ -84,6 +84,7 @@ exports[`Storyshots Items/Category Card Simple Card Left Aligned Light Backgroun
   <div
     className="items"
   >
+    10
      items
   </div>
 </div>
@@ -107,6 +108,7 @@ exports[`Storyshots Items/Category Card Simple Card Right Aligned Dark Backgroun
   <div
     className="items"
   >
+    10
      items
   </div>
 </div>

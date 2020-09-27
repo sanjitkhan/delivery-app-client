@@ -15,7 +15,7 @@ export interface BrandsState {
 }
 
 export interface BrandState {
-  id: string;
+  id: Brand;
   image: string;
   name: string;
   numItems: number;
@@ -25,28 +25,28 @@ export interface BrandState {
 export const initialBrandsState: BrandsState = {
   brands: [
     {
-      id: 'kwalitywalls',
+      id: Brand.KWALITY_WALLS,
       name: 'Kwality Walls',
       image: kwalitywallsImg,
       numItems: 3,
       isFavourited: false
     },
     {
-      id: 'godrej',
+      id: Brand.GODREJ,
       name: 'Godrej',
       image: godrejImg,
       numItems: 8,
       isFavourited: true
     },
     {
-      id: 'mccain',
+      id: Brand.MC_CAIN,
       name: 'McCain',
       image: mccainImg,
       numItems: 5,
       isFavourited: false
     },
     {
-      id: 'britannia',
+      id: Brand.BRITANNIA,
       name: 'Britannia',
       image: britanniaImg,
       numItems: 7,

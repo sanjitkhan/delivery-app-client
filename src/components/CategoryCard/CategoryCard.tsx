@@ -3,13 +3,27 @@ import { RouteComponentProps, withRouter } from "react-router-dom";
 import styled from "styled-components";
 import { BackgroundTheme, CategoryState, TextPosition } from "../../redux/categories/data";
 import { AppRoutes } from "../../routes/routes";
+import { 
+  addFilter as addFilterAction,
+  clearFilters as clearFiltersAction
+} from "../../redux/filters/actions";
+import { FiltersActions } from "../../redux/filters/types";
+import { connect } from "react-redux";
 
-export interface CategoryCardProps extends CategoryState, RouteComponentProps {
+export interface CategoryCardProps extends 
+  CategoryState, 
+  RouteComponentProps, 
+  Partial<FiltersActions> 
+{
   width?: number;
   numItems?: number;
 }
 
-const StyledCardContainer = styled.div<{ width: number, textPosition: TextPosition, backgroundTheme: BackgroundTheme }>`
+const StyledCardContainer = styled.div<{ 
+  width: number, 
+  textPosition: TextPosition, 
+  backgroundTheme: BackgroundTheme 
+}>`
   width: ${props => props.width}%;
   position: relative;
   cursor: pointer;
@@ -26,7 +40,10 @@ const StyledCardContainer = styled.div<{ width: number, textPosition: TextPositi
     ${props => props.textPosition}: 0;
     padding: 20px;
     font-weight: 500;
-    color: ${props => props.backgroundTheme === BackgroundTheme.DARK ? props.theme.content.pageBackground : props.theme.content.text};
+    color: ${props => 
+      props.backgroundTheme === BackgroundTheme.DARK ? 
+      props.theme.content.pageBackground : props.theme.content.text
+    };
   }
   .name {
     top: 0;
@@ -46,14 +63,20 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({
   name,
   numItems,
   textPosition = TextPosition.LEFT,
-  backgroundTheme = BackgroundTheme.LIGHT
+  backgroundTheme = BackgroundTheme.LIGHT,
+  addFilter,
+  clearFilters
 }:CategoryCardProps) => {
   return (
     <StyledCardContainer 
       width={width}
       textPosition={textPosition}
       backgroundTheme={backgroundTheme}
-      onClick={() => history.push(AppRoutes.PRODUCTS)}
+      onClick={() => {
+        clearFilters();
+        addFilter({ categories: [id] });
+        history.push(AppRoutes.PRODUCTS)
+      }}
     >
       <img alt={name + ' image'} src={image}/>
       <div className="name">{name}</div>
@@ -61,5 +84,13 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({
     </StyledCardContainer>
   );
 }
+  
+const mapActionToProps: Partial<FiltersActions> = {
+  addFilter: addFilterAction,
+  clearFilters : clearFiltersAction
+};
 
-export default withRouter(CategoryCard);
+export default withRouter(connect(
+  null,
+  mapActionToProps
+)(CategoryCard));

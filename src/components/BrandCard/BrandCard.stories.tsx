@@ -1,12 +1,13 @@
 import { BrandCard, BrandCardProps } from './BrandCard';
 import iceCreamImg from "../../assets/images/brand_kwalitywalls.png"
 import { addStoryBookElementMeta, addStoryBookElementTemplate } from '../../utils/storybookUtils';
+import { Brand } from '../../redux/brands/data';
 
 const data: Omit<BrandCardProps, 'location' | 'match' | 'history'> = {
-  id: "icecream",
+  id: Brand.KWALITY_WALLS,
   width: 20,
   image: iceCreamImg,
-  name: "Ice Cream",
+  name: "Kwality Walls",
   numItems: 8,
   isFavourited: false
 };

@@ -13,11 +13,13 @@ import SagaTester from "redux-saga-tester";
 import { ItemState } from "../redux/items/data";
 import { BrandState } from "../redux/brands/data";
 import { CombinedState } from "redux";
+import { FilterState } from "../redux/filters/data";
 
 interface StoreParams {
-  items?: ItemState[], 
-  categories?: CategoryState[], 
-  brands?: BrandState[]
+  items?: ItemState[];
+  categories?: CategoryState[];
+  brands?: BrandState[];
+  filters?: FilterState;
 }
 
 export const addRouteProvider = (app: JSX.Element, path?: string) => {
@@ -41,7 +43,8 @@ export const addThemeProvider = (app: JSX.Element, theme?: any) => {
 export const addReduxProvider = (app: JSX.Element, {
   items = [],
   categories = [],
-  brands = []
+  brands = [],
+  filters = {}
 }: StoreParams) => {
   const middlewares = [];
   const mockStoreConfig = configureMockStore(middlewares);
@@ -54,6 +57,9 @@ export const addReduxProvider = (app: JSX.Element, {
     },
     brands: {
       brands: brands
+    },
+    filters: {
+      filters: filters
     }
   });
   return (

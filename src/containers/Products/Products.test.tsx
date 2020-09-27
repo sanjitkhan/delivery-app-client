@@ -15,7 +15,7 @@ describe('Products Page', () => {
             image: '',
             name: 'McCain item 1',
             brand: Brand.MC_CAIN,
-            category: [Category.FROZEN_FOOD],
+            categories: [Category.FROZEN_FOOD],
             stock: 5,
             price: 100.00,
             isFavourited: true
@@ -25,12 +25,13 @@ describe('Products Page', () => {
             image: '',
             name: 'Godrej item 1',
             brand: Brand.GODREJ,
-            category: [Category.FROZEN_FOOD],
+            categories: [Category.FROZEN_FOOD],
             stock: 3,
             price: 200.00,
             isFavourited: false
           }
-        ]
+        ],
+        filters: {}
       }})
     );
     const { getByText } = rendered;

@@ -4,8 +4,14 @@ import { Icon } from "semantic-ui-react";
 import styled from "styled-components";
 import { BrandState } from "../../redux/brands/data";
 import { AppRoutes } from "../../routes/routes";
+import { 
+  addFilter as addFilterAction,
+  clearFilters as clearFiltersAction
+} from "../../redux/filters/actions";
+import { FiltersActions } from "../../redux/filters/types";
+import { connect } from "react-redux";
 
-export interface BrandCardProps extends BrandState, RouteComponentProps {
+export interface BrandCardProps extends BrandState, RouteComponentProps, Partial<FiltersActions> {
   width?: number;
 }
 
@@ -46,15 +52,22 @@ const StyledCardContainer = styled.div<{ width: number }>`
 `;
 
 export const BrandCard: React.FC<BrandCardProps> = ({
+  id,
   history,
   width = 100,
   image,
   name,
   numItems,
-  isFavourited = false
+  isFavourited = false,
+  clearFilters,
+  addFilter
 }:BrandCardProps) => {
   return (
-    <StyledCardContainer width={width} onClick={() => history.push(AppRoutes.PRODUCTS)}>
+    <StyledCardContainer width={width} onClick={() => {
+      clearFilters();
+      addFilter({ brands: [id] });
+      history.push(AppRoutes.PRODUCTS)
+    }}>
       <div className="image-container">
         <img alt={name + ' image'} src={image}/>
       </div>
@@ -70,4 +83,12 @@ export const BrandCard: React.FC<BrandCardProps> = ({
   );
 }
 
-export default withRouter(BrandCard);
+const mapActionToProps: Partial<FiltersActions> = {
+  addFilter: addFilterAction,
+  clearFilters : clearFiltersAction
+};
+
+export default withRouter(connect(
+  null,
+  mapActionToProps
+)(BrandCard));

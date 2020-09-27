@@ -2,13 +2,14 @@ import { CategoryCard, CategoryCardProps } from './CategoryCard';
 import iceCreamImg from "../../assets/images/category_icecream.jpg"
 import groceriesImg from "../../assets/images/category_groceries.jpg"
 import { addStoryBookElementMeta, addStoryBookElementTemplate } from '../../utils/storybookUtils';
-import { BackgroundTheme, TextPosition } from '../../redux/categories/data';
+import { BackgroundTheme, Category, TextPosition } from '../../redux/categories/data';
 
 const data: Omit<CategoryCardProps, 'location' | 'match' | 'history'> = {
-  id: "icecream",
+  id: Category.ICE_CREAM,
   width: 50,
   image: iceCreamImg,
   name: "Ice Cream",
+  numItems: 10,
   textPosition: TextPosition.RIGHT,
   backgroundTheme: BackgroundTheme.DARK
 };
