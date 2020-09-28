@@ -1,5 +1,1253 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Filters/Filter Chip Chip With Image 1`] = `
+<div
+  className="ui image label sc-dlnjPT kLYgve"
+  onClick={[Function]}
+>
+  <img
+    alt="McCain image"
+    data-testid="filter-chip-image"
+    src="brand_mccain.png"
+  />
+  McCain
+  <i
+    aria-hidden="true"
+    className="delete big icon"
+    onClick={[Function]}
+  />
+</div>
+`;
+
+exports[`Storyshots Filters/Filter Chip Chip Without Image 1`] = `
+<div
+  className="ui label sc-dlnjPT kLYgve"
+  onClick={[Function]}
+>
+  McCain
+  <i
+    aria-hidden="true"
+    className="delete big icon"
+    onClick={[Function]}
+  />
+</div>
+`;
+
+exports[`Storyshots Filters/Fitler Panel Closed Filters Bar 1`] = `
+<div
+  className="sc-hBMVcZ fVVVAB"
+>
+  <div
+    className="sc-bqGHjH gRmHER"
+  >
+    <div
+      aria-expanded={false}
+      className="ui fluid search selection dropdown"
+      data-testid="items-search-test"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onMouseDown={[Function]}
+      role="combobox"
+    >
+      <input
+        aria-autocomplete="list"
+        autoComplete="off"
+        className="search"
+        onChange={[Function]}
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+        tabIndex={0}
+        type="text"
+        value=""
+      />
+      <div
+        aria-atomic={true}
+        aria-live="polite"
+        className="divider default text"
+        role="alert"
+      >
+        Search
+      </div>
+      <i
+        aria-hidden="true"
+        className="icon"
+        onClick={[Function]}
+      />
+      <div
+        className="menu transition"
+        role="listbox"
+      />
+    </div>
+    <button
+      className="ui button"
+      onClick={[Function]}
+      type="submit"
+    >
+      <i
+        aria-hidden="true"
+        className="search icon"
+        onClick={[Function]}
+      />
+    </button>
+  </div>
+  <div
+    className="accordion ui sc-fnVYJo hrqGwy"
+  >
+    <div
+      className="title"
+      onClick={[Function]}
+    >
+      <div
+        className="filters-label"
+        data-testid="filters-label"
+      >
+        <i
+          aria-hidden="true"
+          className="chevron down large icon"
+          onClick={[Function]}
+        />
+        Filters
+        <div
+          className="ui label sc-dlnjPT kLYgve"
+          onClick={[Function]}
+        >
+          Clear Filters
+          <i
+            aria-hidden="true"
+            className="delete big icon"
+            onClick={[Function]}
+          />
+        </div>
+      </div>
+      <div
+        className="accordion ui"
+      >
+        <div
+          className="title"
+          data-testid="selected-filters-label-test"
+          onClick={[Function]}
+        >
+          <div
+            className="selected-filters-label"
+          >
+            <i
+              aria-hidden="true"
+              className="chevron down large icon"
+              onClick={[Function]}
+            />
+            Selected Filters
+          </div>
+        </div>
+        <div
+          className="content"
+        >
+          <div
+            className="selected-filters-container"
+            data-testid="selected-filters-container-test"
+          >
+            <div
+              className="ui label sc-dlnjPT kLYgve"
+              onClick={[Function]}
+            >
+              Name: some text
+              <i
+                aria-hidden="true"
+                className="delete big icon"
+                onClick={[Function]}
+              />
+            </div>
+            <div
+              className="ui image label sc-dlnjPT kLYgve"
+              onClick={[Function]}
+            >
+              <img
+                alt="McCain image"
+                data-testid="filter-chip-image"
+                src="brand_mccain.png"
+              />
+              McCain
+              <i
+                aria-hidden="true"
+                className="delete big icon"
+                onClick={[Function]}
+              />
+            </div>
+            <div
+              className="ui image label sc-dlnjPT kLYgve"
+              onClick={[Function]}
+            >
+              <img
+                alt="Kwality Walls image"
+                data-testid="filter-chip-image"
+                src="brand_kwalitywalls.png"
+              />
+              Kwality Walls
+              <i
+                aria-hidden="true"
+                className="delete big icon"
+                onClick={[Function]}
+              />
+            </div>
+            <div
+              className="ui label sc-dlnjPT kLYgve"
+              onClick={[Function]}
+            >
+              Category: Confectioneries
+              <i
+                aria-hidden="true"
+                className="delete big icon"
+                onClick={[Function]}
+              />
+            </div>
+            <div
+              className="ui label sc-dlnjPT kLYgve"
+              onClick={[Function]}
+            >
+              Category: Frozen Foods
+              <i
+                aria-hidden="true"
+                className="delete big icon"
+                onClick={[Function]}
+              />
+            </div>
+            <div
+              className="ui label sc-dlnjPT kLYgve"
+              onClick={[Function]}
+            >
+              Price: 100 to 500
+              <i
+                aria-hidden="true"
+                className="delete big icon"
+                onClick={[Function]}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="content"
+      data-testid="filters-container-test"
+    >
+      <div
+        className="ui header"
+      >
+        Brands
+      </div>
+      <div
+        className="sc-fFSRdu iiIuVq"
+      >
+        <div
+          className="brands-filter-container"
+        >
+          <div
+            className="sc-bkbjAj oCjIH"
+            onClick={[Function]}
+          >
+            <div
+              className="image-container"
+            >
+              <img
+                alt="Kwality Walls brand image"
+                src="brand_kwalitywalls.png"
+              />
+            </div>
+            <div
+              className="name-container"
+            >
+              Kwality Walls
+            </div>
+          </div>
+          <div
+            className="sc-bkbjAj jpXpX"
+            onClick={[Function]}
+          >
+            <div
+              className="image-container"
+            >
+              <img
+                alt="Godrej brand image"
+                src="brand_godrej.png"
+              />
+            </div>
+            <div
+              className="name-container"
+            >
+              Godrej
+            </div>
+          </div>
+          <div
+            className="sc-bkbjAj oCjIH"
+            onClick={[Function]}
+          >
+            <div
+              className="image-container"
+            >
+              <img
+                alt="McCain brand image"
+                src="brand_mccain.png"
+              />
+            </div>
+            <div
+              className="name-container"
+            >
+              McCain
+            </div>
+          </div>
+          <div
+            className="sc-bkbjAj jpXpX"
+            onClick={[Function]}
+          >
+            <div
+              className="image-container"
+            >
+              <img
+                alt="Britannia brand image"
+                src="brand_britannia.png"
+              />
+            </div>
+            <div
+              className="name-container"
+            >
+              Britannia
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="ui header"
+      >
+        Price
+      </div>
+      <div
+        className="sc-iemXMA eKxHwc"
+        style={
+          Object {
+            "flexBasis": "calc(100% - 20px)",
+            "height": "45px",
+            "marginLeft": "10px",
+            "marginRight": "10px",
+            "position": "relative",
+          }
+        }
+      >
+        <div
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
+          style={
+            Object {
+              "backgroundColor": "rgb(150, 150, 150)",
+              "borderRadius": "5px",
+              "height": "10px",
+              "marginTop": "18px",
+              "position": "absolute",
+              "width": "100%",
+            }
+          }
+        />
+        <div
+          className="slider-handles"
+        >
+          <div
+            onKeyDown={[Function]}
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#2185d0",
+                "borderRadius": "50%",
+                "color": "#333",
+                "cursor": "pointer",
+                "height": "20px",
+                "left": "10%",
+                "marginLeft": "-10px",
+                "marginTop": "12px",
+                "position": "absolute",
+                "textAlign": "center",
+                "width": "20px",
+                "zIndex": 2,
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "fontSize": "14px",
+                  "marginTop": "-20px",
+                }
+              }
+            >
+              100
+            </div>
+          </div>
+          <div
+            onKeyDown={[Function]}
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#2185d0",
+                "borderRadius": "50%",
+                "color": "#333",
+                "cursor": "pointer",
+                "height": "20px",
+                "left": "50%",
+                "marginLeft": "-10px",
+                "marginTop": "12px",
+                "position": "absolute",
+                "textAlign": "center",
+                "width": "20px",
+                "zIndex": 2,
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "fontSize": "14px",
+                  "marginTop": "-20px",
+                }
+              }
+            >
+              500
+            </div>
+          </div>
+        </div>
+        <div
+          className="slider-tracks"
+        >
+          <div
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#2185d0",
+                "borderRadius": 5,
+                "cursor": "pointer",
+                "height": "10px",
+                "left": "10%",
+                "marginTop": "18px",
+                "position": "absolute",
+                "width": "40%",
+                "zIndex": 1,
+              }
+            }
+          />
+        </div>
+      </div>
+      <div
+        className="clear-button-container"
+      >
+        <button
+          className="ui button"
+          onClick={[Function]}
+        >
+          Clear all filters
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Filters/Fitler Panel No Filter Selected 1`] = `
+<div
+  className="sc-hBMVcZ fVVVAB"
+>
+  <div
+    className="sc-bqGHjH gRmHER"
+  >
+    <div
+      aria-expanded={false}
+      className="ui fluid search selection dropdown"
+      data-testid="items-search-test"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onMouseDown={[Function]}
+      role="combobox"
+    >
+      <input
+        aria-autocomplete="list"
+        autoComplete="off"
+        className="search"
+        onChange={[Function]}
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+        tabIndex={0}
+        type="text"
+        value=""
+      />
+      <div
+        aria-atomic={true}
+        aria-live="polite"
+        className="divider default text"
+        role="alert"
+      >
+        Search
+      </div>
+      <i
+        aria-hidden="true"
+        className="icon"
+        onClick={[Function]}
+      />
+      <div
+        className="menu transition"
+        role="listbox"
+      />
+    </div>
+    <button
+      className="ui button"
+      onClick={[Function]}
+      type="submit"
+    >
+      <i
+        aria-hidden="true"
+        className="search icon"
+        onClick={[Function]}
+      />
+    </button>
+  </div>
+  <div
+    className="accordion ui sc-fnVYJo hrqGwy"
+  >
+    <div
+      className="active title"
+      onClick={[Function]}
+    >
+      <div
+        className="filters-label"
+        data-testid="filters-label"
+      >
+        <i
+          aria-hidden="true"
+          className="chevron up large icon"
+          onClick={[Function]}
+        />
+        Filters
+      </div>
+    </div>
+    <div
+      className="content active"
+      data-testid="filters-container-test"
+    >
+      <div
+        className="ui header"
+      >
+        Brands
+      </div>
+      <div
+        className="sc-fFSRdu iiIuVq"
+      >
+        <div
+          className="brands-filter-container"
+        >
+          <div
+            className="sc-bkbjAj jpXpX"
+            onClick={[Function]}
+          >
+            <div
+              className="image-container"
+            >
+              <img
+                alt="Kwality Walls brand image"
+                src="brand_kwalitywalls.png"
+              />
+            </div>
+            <div
+              className="name-container"
+            >
+              Kwality Walls
+            </div>
+          </div>
+          <div
+            className="sc-bkbjAj jpXpX"
+            onClick={[Function]}
+          >
+            <div
+              className="image-container"
+            >
+              <img
+                alt="Godrej brand image"
+                src="brand_godrej.png"
+              />
+            </div>
+            <div
+              className="name-container"
+            >
+              Godrej
+            </div>
+          </div>
+          <div
+            className="sc-bkbjAj jpXpX"
+            onClick={[Function]}
+          >
+            <div
+              className="image-container"
+            >
+              <img
+                alt="McCain brand image"
+                src="brand_mccain.png"
+              />
+            </div>
+            <div
+              className="name-container"
+            >
+              McCain
+            </div>
+          </div>
+          <div
+            className="sc-bkbjAj jpXpX"
+            onClick={[Function]}
+          >
+            <div
+              className="image-container"
+            >
+              <img
+                alt="Britannia brand image"
+                src="brand_britannia.png"
+              />
+            </div>
+            <div
+              className="name-container"
+            >
+              Britannia
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="ui header"
+      >
+        Price
+      </div>
+      <div
+        className="sc-iemXMA eKxHwc"
+        style={
+          Object {
+            "flexBasis": "calc(100% - 20px)",
+            "height": "45px",
+            "marginLeft": "10px",
+            "marginRight": "10px",
+            "position": "relative",
+          }
+        }
+      >
+        <div
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
+          style={
+            Object {
+              "backgroundColor": "rgb(150, 150, 150)",
+              "borderRadius": "5px",
+              "height": "10px",
+              "marginTop": "18px",
+              "position": "absolute",
+              "width": "100%",
+            }
+          }
+        />
+        <div
+          className="slider-handles"
+        >
+          <div
+            onKeyDown={[Function]}
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#2185d0",
+                "borderRadius": "50%",
+                "color": "#333",
+                "cursor": "pointer",
+                "height": "20px",
+                "left": "0%",
+                "marginLeft": "-10px",
+                "marginTop": "12px",
+                "position": "absolute",
+                "textAlign": "center",
+                "width": "20px",
+                "zIndex": 2,
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "fontSize": "14px",
+                  "marginTop": "-20px",
+                }
+              }
+            >
+              0
+            </div>
+          </div>
+          <div
+            onKeyDown={[Function]}
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#2185d0",
+                "borderRadius": "50%",
+                "color": "#333",
+                "cursor": "pointer",
+                "height": "20px",
+                "left": "100%",
+                "marginLeft": "-10px",
+                "marginTop": "12px",
+                "position": "absolute",
+                "textAlign": "center",
+                "width": "20px",
+                "zIndex": 2,
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "fontSize": "14px",
+                  "marginTop": "-20px",
+                }
+              }
+            >
+              1000
+            </div>
+          </div>
+        </div>
+        <div
+          className="slider-tracks"
+        >
+          <div
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#2185d0",
+                "borderRadius": 5,
+                "cursor": "pointer",
+                "height": "10px",
+                "left": "0%",
+                "marginTop": "18px",
+                "position": "absolute",
+                "width": "100%",
+                "zIndex": 1,
+              }
+            }
+          />
+        </div>
+      </div>
+      <div
+        className="clear-button-container"
+      >
+        <button
+          className="ui button"
+          onClick={[Function]}
+        >
+          Clear all filters
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Filters/Fitler Panel Some Filters Selected 1`] = `
+<div
+  className="sc-hBMVcZ fVVVAB"
+>
+  <div
+    className="sc-bqGHjH gRmHER"
+  >
+    <div
+      aria-expanded={false}
+      className="ui fluid search selection dropdown"
+      data-testid="items-search-test"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onMouseDown={[Function]}
+      role="combobox"
+    >
+      <input
+        aria-autocomplete="list"
+        autoComplete="off"
+        className="search"
+        onChange={[Function]}
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+        tabIndex={0}
+        type="text"
+        value=""
+      />
+      <div
+        aria-atomic={true}
+        aria-live="polite"
+        className="divider default text"
+        role="alert"
+      >
+        Search
+      </div>
+      <i
+        aria-hidden="true"
+        className="icon"
+        onClick={[Function]}
+      />
+      <div
+        className="menu transition"
+        role="listbox"
+      />
+    </div>
+    <button
+      className="ui button"
+      onClick={[Function]}
+      type="submit"
+    >
+      <i
+        aria-hidden="true"
+        className="search icon"
+        onClick={[Function]}
+      />
+    </button>
+  </div>
+  <div
+    className="accordion ui sc-fnVYJo hrqGwy"
+  >
+    <div
+      className="active title"
+      onClick={[Function]}
+    >
+      <div
+        className="filters-label"
+        data-testid="filters-label"
+      >
+        <i
+          aria-hidden="true"
+          className="chevron up large icon"
+          onClick={[Function]}
+        />
+        Filters
+        <div
+          className="ui label sc-dlnjPT kLYgve"
+          onClick={[Function]}
+        >
+          Clear Filters
+          <i
+            aria-hidden="true"
+            className="delete big icon"
+            onClick={[Function]}
+          />
+        </div>
+      </div>
+      <div
+        className="accordion ui"
+      >
+        <div
+          className="title"
+          data-testid="selected-filters-label-test"
+          onClick={[Function]}
+        >
+          <div
+            className="selected-filters-label"
+          >
+            <i
+              aria-hidden="true"
+              className="chevron down large icon"
+              onClick={[Function]}
+            />
+            Selected Filters
+          </div>
+        </div>
+        <div
+          className="content"
+        >
+          <div
+            className="selected-filters-container"
+            data-testid="selected-filters-container-test"
+          >
+            <div
+              className="ui label sc-dlnjPT kLYgve"
+              onClick={[Function]}
+            >
+              Name: some text
+              <i
+                aria-hidden="true"
+                className="delete big icon"
+                onClick={[Function]}
+              />
+            </div>
+            <div
+              className="ui image label sc-dlnjPT kLYgve"
+              onClick={[Function]}
+            >
+              <img
+                alt="McCain image"
+                data-testid="filter-chip-image"
+                src="brand_mccain.png"
+              />
+              McCain
+              <i
+                aria-hidden="true"
+                className="delete big icon"
+                onClick={[Function]}
+              />
+            </div>
+            <div
+              className="ui image label sc-dlnjPT kLYgve"
+              onClick={[Function]}
+            >
+              <img
+                alt="Kwality Walls image"
+                data-testid="filter-chip-image"
+                src="brand_kwalitywalls.png"
+              />
+              Kwality Walls
+              <i
+                aria-hidden="true"
+                className="delete big icon"
+                onClick={[Function]}
+              />
+            </div>
+            <div
+              className="ui label sc-dlnjPT kLYgve"
+              onClick={[Function]}
+            >
+              Category: Confectioneries
+              <i
+                aria-hidden="true"
+                className="delete big icon"
+                onClick={[Function]}
+              />
+            </div>
+            <div
+              className="ui label sc-dlnjPT kLYgve"
+              onClick={[Function]}
+            >
+              Category: Frozen Foods
+              <i
+                aria-hidden="true"
+                className="delete big icon"
+                onClick={[Function]}
+              />
+            </div>
+            <div
+              className="ui label sc-dlnjPT kLYgve"
+              onClick={[Function]}
+            >
+              Price: 100 to 500
+              <i
+                aria-hidden="true"
+                className="delete big icon"
+                onClick={[Function]}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="content active"
+      data-testid="filters-container-test"
+    >
+      <div
+        className="ui header"
+      >
+        Brands
+      </div>
+      <div
+        className="sc-fFSRdu iiIuVq"
+      >
+        <div
+          className="brands-filter-container"
+        >
+          <div
+            className="sc-bkbjAj oCjIH"
+            onClick={[Function]}
+          >
+            <div
+              className="image-container"
+            >
+              <img
+                alt="Kwality Walls brand image"
+                src="brand_kwalitywalls.png"
+              />
+            </div>
+            <div
+              className="name-container"
+            >
+              Kwality Walls
+            </div>
+          </div>
+          <div
+            className="sc-bkbjAj jpXpX"
+            onClick={[Function]}
+          >
+            <div
+              className="image-container"
+            >
+              <img
+                alt="Godrej brand image"
+                src="brand_godrej.png"
+              />
+            </div>
+            <div
+              className="name-container"
+            >
+              Godrej
+            </div>
+          </div>
+          <div
+            className="sc-bkbjAj oCjIH"
+            onClick={[Function]}
+          >
+            <div
+              className="image-container"
+            >
+              <img
+                alt="McCain brand image"
+                src="brand_mccain.png"
+              />
+            </div>
+            <div
+              className="name-container"
+            >
+              McCain
+            </div>
+          </div>
+          <div
+            className="sc-bkbjAj jpXpX"
+            onClick={[Function]}
+          >
+            <div
+              className="image-container"
+            >
+              <img
+                alt="Britannia brand image"
+                src="brand_britannia.png"
+              />
+            </div>
+            <div
+              className="name-container"
+            >
+              Britannia
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="ui header"
+      >
+        Price
+      </div>
+      <div
+        className="sc-iemXMA eKxHwc"
+        style={
+          Object {
+            "flexBasis": "calc(100% - 20px)",
+            "height": "45px",
+            "marginLeft": "10px",
+            "marginRight": "10px",
+            "position": "relative",
+          }
+        }
+      >
+        <div
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
+          style={
+            Object {
+              "backgroundColor": "rgb(150, 150, 150)",
+              "borderRadius": "5px",
+              "height": "10px",
+              "marginTop": "18px",
+              "position": "absolute",
+              "width": "100%",
+            }
+          }
+        />
+        <div
+          className="slider-handles"
+        >
+          <div
+            onKeyDown={[Function]}
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#2185d0",
+                "borderRadius": "50%",
+                "color": "#333",
+                "cursor": "pointer",
+                "height": "20px",
+                "left": "10%",
+                "marginLeft": "-10px",
+                "marginTop": "12px",
+                "position": "absolute",
+                "textAlign": "center",
+                "width": "20px",
+                "zIndex": 2,
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "fontSize": "14px",
+                  "marginTop": "-20px",
+                }
+              }
+            >
+              100
+            </div>
+          </div>
+          <div
+            onKeyDown={[Function]}
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#2185d0",
+                "borderRadius": "50%",
+                "color": "#333",
+                "cursor": "pointer",
+                "height": "20px",
+                "left": "50%",
+                "marginLeft": "-10px",
+                "marginTop": "12px",
+                "position": "absolute",
+                "textAlign": "center",
+                "width": "20px",
+                "zIndex": 2,
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "fontSize": "14px",
+                  "marginTop": "-20px",
+                }
+              }
+            >
+              500
+            </div>
+          </div>
+        </div>
+        <div
+          className="slider-tracks"
+        >
+          <div
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#2185d0",
+                "borderRadius": 5,
+                "cursor": "pointer",
+                "height": "10px",
+                "left": "10%",
+                "marginTop": "18px",
+                "position": "absolute",
+                "width": "40%",
+                "zIndex": 1,
+              }
+            }
+          />
+        </div>
+      </div>
+      <div
+        className="clear-button-container"
+      >
+        <button
+          className="ui button"
+          onClick={[Function]}
+        >
+          Clear all filters
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Filters/Search Bar Search Bar 1`] = `
+<div
+  className="sc-bqGHjH gRmHER"
+>
+  <div
+    aria-expanded={false}
+    className="ui fluid search selection dropdown"
+    data-testid="items-search-test"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onMouseDown={[Function]}
+    role="combobox"
+  >
+    <input
+      aria-autocomplete="list"
+      autoComplete="off"
+      className="search"
+      onChange={[Function]}
+      style={
+        Object {
+          "width": undefined,
+        }
+      }
+      tabIndex={0}
+      type="text"
+      value=""
+    />
+    <div
+      aria-atomic={true}
+      aria-live="polite"
+      className="divider default text"
+      role="alert"
+    >
+      Search
+    </div>
+    <i
+      aria-hidden="true"
+      className="icon"
+      onClick={[Function]}
+    />
+    <div
+      className="menu transition"
+      role="listbox"
+    />
+  </div>
+  <button
+    className="ui button"
+    onClick={[Function]}
+    type="submit"
+  >
+    <i
+      aria-hidden="true"
+      className="search icon"
+      onClick={[Function]}
+    />
+  </button>
+</div>
+`;
+
 exports[`Storyshots Items/Brand Card Favourited 1`] = `
 <div
   className="sc-bdnylx dHYuvc"
@@ -116,7 +1364,7 @@ exports[`Storyshots Items/Category Card Simple Card Right Aligned Dark Backgroun
 
 exports[`Storyshots Items/Item Card Favourited 1`] = `
 <div
-  className="sc-dlnjPT gRTfBS"
+  className="sc-jrsJCI iWmxnC"
   width={20}
 >
   <div
@@ -183,7 +1431,7 @@ exports[`Storyshots Items/Item Card Favourited 1`] = `
 
 exports[`Storyshots Items/Item Card Not Added 1`] = `
 <div
-  className="sc-dlnjPT gRTfBS"
+  className="sc-jrsJCI iWmxnC"
   width={20}
 >
   <div
@@ -236,7 +1484,7 @@ exports[`Storyshots Items/Item Card Not Added 1`] = `
 
 exports[`Storyshots Items/Item Card Not Favourited 1`] = `
 <div
-  className="sc-dlnjPT gRTfBS"
+  className="sc-jrsJCI iWmxnC"
   width={20}
 >
   <div

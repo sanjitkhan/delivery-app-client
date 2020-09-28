@@ -1,7 +1,7 @@
-import kwalitywallsImg from "../../assets/images/brand_kwalitywalls.png"
-import britanniaImg from "../../assets/images/brand_britannia.png"
-import godrejImg from "../../assets/images/brand_godrej.png"
-import mccainImg from "../../assets/images/brand_mccain.png"
+import kwalitywallsImg from "../../assets/images/brand_kwalitywalls.png";
+import britanniaImg from "../../assets/images/brand_britannia.png";
+import godrejImg from "../../assets/images/brand_godrej.png";
+import mccainImg from "../../assets/images/brand_mccain.png";
 
 export enum Brand {
   MC_CAIN = 'mccain',

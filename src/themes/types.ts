@@ -15,11 +15,13 @@ export interface ColorGradientLevels {
 }
 
 export interface BrightnessLevels {
+    lightest?: string;
     lighter?: string;
     light?: string;
     normal: string;
     dark?: string;
     darker?: string;
+    darkest?: string;
 }
 
 export interface Theme {

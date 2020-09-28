@@ -12,6 +12,8 @@ import { lightTheme } from "../themes";
 import { watchItemsFunctions } from "../redux/items";
 import { watchBrandsFunctions } from "../redux/brands";
 import { watchCategoriesFunctions } from "../redux/categories";
+import { BrandState } from "../redux/brands/data";
+import { CategoryState } from "../redux/categories/data";
 
 // init store
 export const initStore = () => {
@@ -58,3 +60,28 @@ export const init = async (locale: string, store) => {
 
 // other utils
 export type GenericCallBack = (...args: any[]) => any;
+
+export const getBrandName = (brands: BrandState[], id: BrandState['id']) => {
+  return brands.find(brand => brand.id === id)?.name || '';
+};
+
+export const getBrandImage = (brands: BrandState[], id: BrandState['id']) => {
+  return brands.find(brand => brand.id === id)?.image || '';
+};
+
+export const getCategoryName = (categories: CategoryState[], id: CategoryState['id']) => {
+  return categories.find(category => category.id === id)?.name || '';
+};
+
+export const isQueryPresentInString = (query: string, str: string) => {
+  return str.trim().toLowerCase().includes(query.trim().toLowerCase());
+};
+
+export const toTitleCase = (str: string) => {
+  return str.replace(
+    /\w\S*/g,
+    function(txt) {
+      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    }
+  );
+}

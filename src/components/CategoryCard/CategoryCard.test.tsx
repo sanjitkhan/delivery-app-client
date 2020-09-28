@@ -1,9 +1,8 @@
 import React from 'react';
 import { render, RenderResult } from '@testing-library/react';
-import { addAllProviders, mouseClick } from '../../utils/testUtils';
+import { addAllProviders, getMockStore, mouseClick } from '../../utils/testUtils';
 import CategoryCard, { CategoryCardProps } from './CategoryCard';
 import { TextPosition, BackgroundTheme, Category } from '../../redux/categories/data';
-import configureMockStore from 'redux-mock-store';
 
 const categoryCardProps: Omit<CategoryCardProps, 'location' | 'match' | 'history'> = {
   id: Category.ICE_CREAM,
@@ -26,21 +25,7 @@ describe('Category card', () => {
   });
 
   it('should add a category filter on clicking on a category card', async () => {
-    const mockStoreConfig = configureMockStore();
-    const mockStore = mockStoreConfig({
-      items: {
-        items: []
-      },
-      categories: {
-        categories: []
-      },
-      brands: {
-        brands: []
-      },
-      filters: {
-        filters: {}
-      }
-    });
+    const mockStore = getMockStore({});
     const rendered: RenderResult = render(
       addAllProviders({component: <CategoryCard {...categoryCardProps} />, store: mockStore})
     );
