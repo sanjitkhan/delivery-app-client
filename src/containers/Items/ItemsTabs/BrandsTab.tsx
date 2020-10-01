@@ -18,9 +18,7 @@ const StyledContainer = styled.div`
 `;
 
 const BrandsTab: React.FC<BrandsTabProps> = ({
-  brands,
-  addBrand,
-  fetchAllBrands
+  brands
 }:BrandsTabProps) => {
   return (
     <StyledContainer>

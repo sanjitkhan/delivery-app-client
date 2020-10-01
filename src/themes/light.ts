@@ -26,9 +26,12 @@ const colors: Colors = {
   darkRed: '#8B0000',
 
   primary: {
-    lighter: '#A9B3D4',
-    light: '#7497BA',
+    lightest: '#D0DCE7',
+    lighter: '#9CB4CD',
+    light: '#678DB3',
     normal: '#446688',
+    darker: '#304961',
+    darkest: '#1D2B3A'
   },
 
   secondary: {

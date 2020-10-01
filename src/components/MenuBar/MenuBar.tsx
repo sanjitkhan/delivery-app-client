@@ -47,13 +47,13 @@ export const MenuBar: React.FC = () => {
       value: 'items',
       path: AppRoutes.ITEMS,
       icon: 'food',
-      text: 'Items'
+      text: 'Collections'
     },
     {
-      value: 'search',
-      path: AppRoutes.SEARCH,
+      value: 'products',
+      path: AppRoutes.PRODUCTS,
       icon: 'search',
-      text: 'Search'
+      text: 'Products'
     },
     {
       value: 'order',

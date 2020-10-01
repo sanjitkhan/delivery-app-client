@@ -10,8 +10,8 @@ describe('MenuBar', () => {
       addAllProviders({ component: <MenuBar /> })
     );
     const { getByText } = rendered;
-    expect(getByText(/Items/)).toBeInTheDocument(); // "Items" option
-    expect(getByText(/Search/)).toBeInTheDocument(); // "Search" option
+    expect(getByText(/Collections/)).toBeInTheDocument(); // "Collections" option
+    expect(getByText(/Products/)).toBeInTheDocument(); // "Products" option
     expect(getByText(/Order/)).toBeInTheDocument(); // "Order" option
     expect(getByText(/Profile/)).toBeInTheDocument(); // "Profile" option
     if (rendered) rendered.unmount();

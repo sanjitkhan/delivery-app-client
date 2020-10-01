@@ -9,13 +9,15 @@ const getReducer = (filtersFunctions: FiltersFunctions) => (
         case filtersFunctions.ADD_FILTER: {
             return {
                 filters: {...state.filters, ...action.payload}
-            }
+            };
         }
         case filtersFunctions.DELETE_FILTER: {
-            if (state.filters[action.payload]) {
+            if (state.filters[action.payload] !== undefined) {
                 delete state.filters[action.payload];
             }
-            return state;
+            return {
+                filters: {...state.filters}
+            };
         }
         case filtersFunctions.CLEAR_FILTERS: {
             return initialFiltersState;

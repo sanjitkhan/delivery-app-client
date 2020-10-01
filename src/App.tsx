@@ -4,7 +4,6 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import MenuBar from './components/MenuBar/MenuBar';
 import Order from './containers/Order/Order';
 import Profile from './containers/Profile/Profile';
-import Search from './containers/Search/Search';
 import ItemsRouter from './routes/ItemsRouter';
 import { AppRoutes } from './routes/routes';
 import Products from './containers/Products/Products';
@@ -37,7 +36,6 @@ export const App: React.FC = () => {
             <Redirect to={AppRoutes.ITEMS} />
           </Route>
           <Route exact path={AppRoutes.PRODUCTS} component={Products} />
-          <Route exact path={AppRoutes.SEARCH} component={Search} />
           <Route exact path={AppRoutes.ORDER} component={Order} />
           <Route exact path={AppRoutes.PROFILE} component={Profile} />
         </Switch>

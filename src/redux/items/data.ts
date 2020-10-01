@@ -20,12 +20,12 @@ export interface ItemState {
   isFavourited: boolean;
 }
 
-export const initialState: ItemsState = {
+export const initialItemsState: ItemsState = {
   items: [
     {
       id: 'mccain-item1',
       image: mccainImg,
-      name: 'McCain item 1',
+      name: 'Item 1',
       brand: Brand.MC_CAIN,
       categories: [Category.FROZEN_FOOD],
       stock: 5,
@@ -35,7 +35,7 @@ export const initialState: ItemsState = {
     {
       id: 'mccain-item2',
       image: mccainImg,
-      name: 'McCain item 2',
+      name: 'Item 2',
       brand: Brand.MC_CAIN,
       categories: [Category.FROZEN_FOOD],
       stock: 15,
@@ -45,7 +45,7 @@ export const initialState: ItemsState = {
     {
       id: 'godrej-item1',
       image: godrejImg,
-      name: 'Godrej item 1',
+      name: 'Item 3',
       brand: Brand.GODREJ,
       categories: [Category.FROZEN_FOOD],
       stock: 3,
@@ -55,7 +55,7 @@ export const initialState: ItemsState = {
     {
       id: 'godrej-item2',
       image: godrejImg,
-      name: 'Godrej item 2',
+      name: 'Item 3',
       brand: Brand.GODREJ,
       categories: [Category.FROZEN_FOOD],
       stock: 32,
@@ -65,7 +65,7 @@ export const initialState: ItemsState = {
     {
       id: 'godrej-item3',
       image: godrejImg,
-      name: 'Godrej item 3',
+      name: 'Item 5',
       brand: Brand.GODREJ,
       categories: [Category.GROCERY],
       stock: 32,
@@ -75,7 +75,7 @@ export const initialState: ItemsState = {
     {
       id: 'kwalitywalls-item1',
       image: kwalitywallsImg,
-      name: 'Kwality Walls item 1',
+      name: 'Item 6',
       brand: Brand.KWALITY_WALLS,
       categories: [Category.ICE_CREAM],
       stock: 12,
@@ -85,7 +85,7 @@ export const initialState: ItemsState = {
     {
       id: 'kwalitywalls-item2',
       image: kwalitywallsImg,
-      name: 'Kwality Walls item 2',
+      name: 'Item 7',
       brand: Brand.KWALITY_WALLS,
       categories: [Category.ICE_CREAM],
       stock: 31,
@@ -95,7 +95,7 @@ export const initialState: ItemsState = {
     {
       id: 'britannia-item1',
       image: britanniaImg,
-      name: 'Britannia item 1',
+      name: 'Item 8',
       brand: Brand.BRITANNIA,
       categories: [Category.CONFECTIONERY],
       stock: 97,
@@ -105,7 +105,7 @@ export const initialState: ItemsState = {
     {
       id: 'britannia-item2',
       image: britanniaImg,
-      name: 'Britannia item 2',
+      name: 'Item 9',
       brand: Brand.BRITANNIA,
       categories: [Category.CONFECTIONERY],
       stock: 31,

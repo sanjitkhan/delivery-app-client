@@ -1,9 +1,8 @@
 import React from 'react';
 import { render, RenderResult } from '@testing-library/react';
-import { addAllProviders, mouseClick } from '../../utils/testUtils';
+import { addAllProviders, getMockStore, mouseClick } from '../../utils/testUtils';
 import BrandCard, { BrandCardProps } from './BrandCard';
 import { Brand } from '../../redux/brands/data';
-import configureMockStore from 'redux-mock-store';
 
 const brandCardProps: Omit<BrandCardProps, 'location' | 'match' | 'history'> = {
   id: Brand.KWALITY_WALLS,
@@ -26,21 +25,7 @@ describe('Brand card', () => {
   });
 
   it('should add a brand filter on clicking on a brand card', async () => {
-    const mockStoreConfig = configureMockStore();
-    const mockStore = mockStoreConfig({
-      items: {
-        items: []
-      },
-      categories: {
-        categories: []
-      },
-      brands: {
-        brands: []
-      },
-      filters: {
-        filters: {}
-      }
-    });
+    const mockStore = getMockStore({});
     const rendered: RenderResult = render(
       addAllProviders({component: <BrandCard {...brandCardProps} />, store: mockStore})
     );

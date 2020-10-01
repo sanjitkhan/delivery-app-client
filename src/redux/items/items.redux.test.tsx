@@ -12,7 +12,7 @@ const item: ItemState = {
   image: '',
   name: 'Britannia item 1',
   brand: Brand.BRITANNIA,
-  category: [Category.CONFECTIONERY],
+  categories: [Category.CONFECTIONERY],
   stock: 97,
   price: 30.00,
   isFavourited: false

@@ -40,10 +40,10 @@ interface ReceiveBrandsAction {
 }
 
 export interface BrandsActions {
-    addBrand: any;
-    deleteBrand: any;
-    fetchAllBrands: any;
-    receiveBrands: any;
+    addBrand?: any;
+    deleteBrand?: any;
+    fetchAllBrands?: any;
+    receiveBrands?: any;
 }
 
 export type BrandsTypes = AddBrandAction | DeleteBrandAction | FetchAllBrandsAction | ReceiveBrandsAction;

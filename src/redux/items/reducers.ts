@@ -1,4 +1,4 @@
-import { initialState, ItemsState } from "./data";
+import { initialItemsState, ItemsState } from "./data";
 import {
     ItemsFunctions,
     ItemsFunctionsEnum,
@@ -6,7 +6,7 @@ import {
 } from './types';
 
 const getReducer = (itemsFunctions: ItemsFunctions) => (
-    state = initialState,
+    state = initialItemsState,
     action: ItemsTypes
 ): ItemsState => {
     switch(action.type) {

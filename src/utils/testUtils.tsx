@@ -5,7 +5,7 @@ import { Router } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import configureMockStore from 'redux-mock-store';
 import { lightTheme } from "../themes";
-import { RenderResult } from "@testing-library/react";
+import { fireEvent, RenderResult } from "@testing-library/react";
 import { createMemoryHistory } from 'history';
 import { CategoryState } from "../redux/categories/data";
 import { rootReducer } from "../redux";
@@ -20,6 +20,62 @@ interface StoreParams {
   categories?: CategoryState[];
   brands?: BrandState[];
   filters?: FilterState;
+}
+
+
+export const getSagaTester = ({
+  items = [],
+  categories = [],
+  brands = [],
+  filters = {}
+}: StoreParams) => new SagaTester({
+  initialState: {
+    items: {
+      items: items
+    },
+    categories: {
+      categories: categories
+    },
+    brands: {
+      brands: brands
+    },
+    filters: {
+      filters: filters
+    }
+  },
+  reducers: rootReducer as CombinedState<any>
+});
+
+export const getMockStore = ({
+  items = [],
+  categories = [],
+  brands = [],
+  filters = {}
+}: StoreParams) => {
+  const mockStoreConfig = configureMockStore([]);
+  const mockStore = mockStoreConfig({
+    items: {
+      items: items
+    },
+    categories: {
+      categories: categories
+    },
+    brands: {
+      brands: brands
+    },
+    filters: {
+      filters: filters
+    }
+  });
+  return mockStore;
+};
+
+export const addReduxProvider = (app: any, store: any) => {
+  return (
+    <Provider store={store || getMockStore({})}>
+      {app}
+    </Provider>
+  );
 }
 
 export const addRouteProvider = (app: any, path?: string) => {
@@ -37,30 +93,6 @@ export const addThemeProvider = (app: any, theme?: any) => {
     <ThemeProvider theme={theme || lightTheme}>
       {app}
     </ThemeProvider>
-  );
-}
-
-export const addReduxProvider = (app: any, store: any) => {
-  const middlewares = [];
-  const mockStoreConfig = configureMockStore(middlewares);
-  const mockStore = mockStoreConfig({
-    items: {
-      items: []
-    },
-    categories: {
-      categories: []
-    },
-    brands: {
-      brands: []
-    },
-    filters: {
-      filters: {}
-    }
-  });
-  return (
-    <Provider store={store || mockStore}>
-      {app}
-    </Provider>
   );
 }
 
@@ -101,28 +133,13 @@ export const addAllProviders = ({
 }
 
 export const mouseClick = (node: HTMLElement): boolean =>
-  node.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+  fireEvent.click(node);
+
+export const changeInput = (node: any, value: string): boolean =>
+  fireEvent.change(node, { target: { value: value } });
+
 
 export const getElementBySelector = (
   rendered: RenderResult,
   selectors: string
 ) => rendered.container.querySelectorAll(selectors);
-
-export const getSagaTester = ({
-  items = [],
-  categories = [],
-  brands = []
-}: StoreParams) => new SagaTester({
-  initialState: {
-    items: {
-      items: items
-    },
-    categories: {
-      categories: categories
-    },
-    brands: {
-      brands: brands
-    }
-  },
-  reducers: rootReducer as CombinedState<any>
-});

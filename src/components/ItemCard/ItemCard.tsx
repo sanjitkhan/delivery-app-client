@@ -2,9 +2,10 @@ import React from "react";
 import { connect } from "react-redux";
 import { Button, Icon, Label } from "semantic-ui-react";
 import styled from "styled-components";
-import { BrandsState, BrandState } from "../../redux/brands/data";
+import { BrandsState } from "../../redux/brands/data";
 import { ItemState } from "../../redux/items/data";
 import { ApplicationState } from "../../redux/types";
+import { getBrandName } from "../../utils/utils";
 
 export interface ItemCardProps extends ItemState, BrandsState {
   width?: number;
@@ -86,8 +87,10 @@ const StyledCardContainer = styled.div<{ width: number }>`
     }
     .brand {
       color: ${props => props.theme.content.text.light};
-      font-weight: 300;
+      font-weight: 500;
       font-size: 80%;
+      font-variant-caps: all-small-caps;
+      letter-spacing: 0.3px;
     }
     .stock {
       color: ${props => props.theme.content.text.light};
@@ -111,17 +114,13 @@ export const ItemCard: React.FC<ItemCardProps> = ({
   price,
   brands
 }:ItemCardProps) => {
-  const getBrandName = (id: BrandState['id']) => {
-    return brands.find(brand => brand.id === id)?.name || ''
-  }
-
   return (
     <StyledCardContainer width={width}>
       <div className="image-container">
         <div><img alt={name + ' image'} src={image}/></div>
       </div>
       <div className="details-container">
-        <div className="brand">{getBrandName(brand)}</div>
+        <div className="brand">{getBrandName(brands, brand)}</div>
         <div className="name">{name}</div>
         {/* <div className="stock">Available in stock: {stock}</div> */}
         <div className="price">Rs. {price}</div>
