@@ -1,39 +1,39 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "97a3fa29568d1e075b6436f4bc05f5ed",
+    "revision": "994c59ca7ce05d6bed4a5953a98a6e69",
     "url": "/delivery-app-client/index.html"
   },
   {
-    "revision": "3195a86359047f95fa30",
+    "revision": "15af043d8cdd27eb8f57",
     "url": "/delivery-app-client/static/css/2.d4178bee.chunk.css"
   },
   {
-    "revision": "b8c49803cae498cf78f1",
+    "revision": "7512952597afd694029e",
     "url": "/delivery-app-client/static/css/main.ef7bf322.chunk.css"
   },
   {
-    "revision": "3195a86359047f95fa30",
-    "url": "/delivery-app-client/static/js/2.b1ab1818.chunk.js"
+    "revision": "15af043d8cdd27eb8f57",
+    "url": "/delivery-app-client/static/js/2.0ae27523.chunk.js"
   },
   {
-    "revision": "5bd09eb7f2cf4d145d532d862be18942",
-    "url": "/delivery-app-client/static/js/2.b1ab1818.chunk.js.LICENSE.txt"
+    "revision": "a5bb631f78d6ee3e15059a3c977c00f7",
+    "url": "/delivery-app-client/static/js/2.0ae27523.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6a7ebc035bf716eae862",
-    "url": "/delivery-app-client/static/js/3.9fc14f9c.chunk.js"
+    "revision": "3307455f3d172e757ff0",
+    "url": "/delivery-app-client/static/js/3.e76432ff.chunk.js"
   },
   {
-    "revision": "c2963e438a036c458973",
-    "url": "/delivery-app-client/static/js/4.d5f6ec5e.chunk.js"
+    "revision": "2c8d134cebd960af0942",
+    "url": "/delivery-app-client/static/js/4.6c8c1590.chunk.js"
   },
   {
-    "revision": "b8c49803cae498cf78f1",
-    "url": "/delivery-app-client/static/js/main.f5f6cf78.chunk.js"
+    "revision": "7512952597afd694029e",
+    "url": "/delivery-app-client/static/js/main.ebe8bb20.chunk.js"
   },
   {
-    "revision": "636da29ab54df238d57e",
-    "url": "/delivery-app-client/static/js/runtime-main.e02e4f2f.js"
+    "revision": "06f784c1c9df24f8124a",
+    "url": "/delivery-app-client/static/js/runtime-main.b427f951.js"
   },
   {
     "revision": "13db00b7a34fee4d819ab7f9838cc428",
@@ -56,16 +56,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/delivery-app-client/static/media/brand-icons.e8c322de.woff2"
   },
   {
-    "revision": "9170104b20b33f76705c76ac3d6b4397",
-    "url": "/delivery-app-client/static/media/brand_britannia.9170104b.png"
+    "revision": "4b202977e23e9a8b641de5c5dc225bbc",
+    "url": "/delivery-app-client/static/media/brand_britannia.4b202977.png"
   },
   {
-    "revision": "5fb410af16bf4e14ac2fc6ebcf6791e9",
-    "url": "/delivery-app-client/static/media/brand_kwalitywalls.5fb410af.png"
+    "revision": "1b857c479240abe6ead33348af1ca872",
+    "url": "/delivery-app-client/static/media/brand_kwalitywalls.1b857c47.png"
   },
   {
-    "revision": "8b146874ce9ac9328acaf64899211c9a",
-    "url": "/delivery-app-client/static/media/brand_mccain.8b146874.png"
+    "revision": "472e38eed9289a8d3f8906f57e63d463",
+    "url": "/delivery-app-client/static/media/brand_mccain.472e38ee.png"
   },
   {
     "revision": "05dadc4d9688bea1ca766e5df65d5c24",
